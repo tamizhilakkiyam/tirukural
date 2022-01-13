@@ -1,6 +1,7 @@
 <script>
     import Kural from './Kural.svelte';
     import MiniKural from './MiniKural.svelte';
+    import Footer from './Footer.svelte';
 
     const queries = new URLSearchParams(window.location.search);
     const withinKuralRange = x => x > 0 && x <= 1330;
@@ -93,6 +94,8 @@
         if (e.key == "Enter")
             parseSearchQuery(document.getElementById('search').value)
     }}>
+
+    <p style="margin-top: 5px;">தேட Enter-ஐ அழுத்தவும்...</p>
 </div>
 
 <div class="content">
@@ -168,3 +171,5 @@
         {/if}
     {/if}
 </div>
+
+<Footer/>
