@@ -81,7 +81,7 @@
         }
     }
 
-    fetch('/tirukkural.json')
+    fetch(`${window.location.href}/tirukkural.json`)
         .then(res => res.json())
         .then(body => {
             loaded = body;
