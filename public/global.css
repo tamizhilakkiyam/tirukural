@@ -143,16 +143,8 @@ body {
 	cursor: pointer;
 }
 
-.indices h3:hover, .indices h4:hover, .indices h5:hover {
-	text-decoration: underline;
-}
-
 .indices h4 {
 	margin-left: 10px;
-}
-
-.indices h5 {
-	margin-left: 22px;
 }
 
 .indices h3 {
@@ -185,6 +177,32 @@ body {
 
 .indices h3, .indices h4 {
 	font-weight: bold;
+}
+
+.hidden, .hidden h5 {
+	display: none!important;
+}
+
+.indices h4 {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.indices h4 p {
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: -1px;
+}
+
+.indices h4 p:hover {
+	text-decoration: underline;
+}
+
+.subcontents {
+	border-left: 2px solid #f0da1a;
+	padding-left: 7px;
+	margin-left: 22px;
+	margin-top: 5px;
 }
 
 @media (max-width: 500px) {

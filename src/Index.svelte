@@ -14,17 +14,25 @@
         >{section.name} / {section.translation}</h3><br/>
 
         {#each section.chapters as chapter}
-            <h4 
-                class="tamil translated bold clickable"
-                on:click={() => dispatch('request', { start: chapter.kurals[0] })}
-            >{chapter.name} / {chapter.translation}</h4><br/>
+            <h4 class="tamil translated bold">
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <a on:click={() => {
+                    document.getElementById(`cha-${chapter.kurals[0]}`).classList.toggle('hidden')
+                }}><i class="fas fa-chevron-right"></i></a>
 
-            {#each chapter.chapters as chapter}
-                <h5 
-                    class="tamil translated bold clickable"
-                    on:click={() => dispatch('request', { start: chapter.se[0] })}
-                >{chapter.name} / {chapter.translation}</h5><br/>
-            {/each}
+                <p 
+                    on:click={() => dispatch('request', { start: chapter.kurals[0] })}
+                >{chapter.name} / {chapter.translation}</p>
+            </h4>
+
+            <div id="cha-{chapter.kurals[0]}" class="hidden subcontents">
+                {#each chapter.chapters as childChapter}
+                    <h5 
+                        class="tamil translated bold clickable"
+                        on:click={() => dispatch('request', { start: childChapter.se[0] })}
+                    >{childChapter.name} / {childChapter.translation}</h5><br/>
+                {/each}
+            </div>
         {/each}
     {/each}
 </div>
