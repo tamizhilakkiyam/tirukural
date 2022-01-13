@@ -47,10 +47,10 @@
     <p class="tamil translated kural-bold">பால் / Section: </p>
     <p class="tamil translated">{section[0]} / {section[1]}</p><br/>
 
-    <p class="tamil translated kural-bold">இயல் / Chapter: </p>
+    <p class="tamil translated kural-bold">இயல் / ChapterGroup: </p>
     <p class="tamil translated">{chapter[0]} / {chapter[1]}</p><br/>
 
-    <p class="tamil translated kural-bold">அதிகாரம் / Sub-Chapter: </p>
+    <p class="tamil translated kural-bold">அதிகாரம் / Chapter: </p>
     <p class="tamil translated">{subChapter[0]} / {subChapter[1]}</p>
 </div>
 
