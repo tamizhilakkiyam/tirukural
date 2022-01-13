@@ -92,6 +92,10 @@ body {
 	font-family: "Hind Madurai";
 }
 
+.kural-button:hover {
+	background-color: #ffea2c;
+}
+
 .vilakam {
 	margin-top: 18px;
 	border-left: 4px solid #f0da1a;
