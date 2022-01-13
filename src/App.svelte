@@ -1,6 +1,7 @@
 <script>
     import Kural from './Kural.svelte';
     import MiniKural from './MiniKural.svelte';
+    import Index from './Index.svelte';
     import Footer from './Footer.svelte';
 
     const queries = new URLSearchParams(window.location.search);
@@ -10,7 +11,7 @@
     let loaded = [];
     let searchResults = null;
     let searchPageIndex = 1;
-    let dailyKuralNumber = parseInt(localStorage.getItem('kural_aim') || '0');
+    let mainKuralNumber = parseInt(localStorage.getItem('kural_no') || '0');
     let searchQuery = queries.get('search');
     let requestedKural = parseInt(queries.get('kural'));
     
@@ -48,26 +49,24 @@
         return searchResults = results;
     }
 
-    function updateDailyKuralNumber (x) {
-        if (!withinKuralRange(dailyKuralNumber)) return;
-        dailyKuralNumber = dailyKuralNumber + x;
-        localStorage.setItem('kural_aim', dailyKuralNumber);
+    function updateMainKuralNumber (x, isIndex) {
+        console.log(mainKuralNumber)
+        if (isIndex) {
+            if (!withinKuralRange(x + 1)) return;
+            mainKuralNumber = x;
+        } else {
+            if (!withinKuralRange(mainKuralNumber + 1)) return;
+            mainKuralNumber = mainKuralNumber + x;
+        }
+
+        localStorage.setItem('kural_no', mainKuralNumber);
     }
 
-    function resetConfig () {
-        requestedKural = null;
-        searchResults = [];
-        searchPageIndex = 1;
-        searchQuery = null;
-        window.location.search = "";
-    }
-
-    function showKuralByNumber (n) {
+    function resetConfig (n = null) {
         requestedKural = n;
-        searchResults = [];
+        searchResults = null;
         searchPageIndex = 1;
         searchQuery = null;
-        window.location.search = "";
     }
 
     function updateSearchPageIndex (x) {
@@ -89,38 +88,49 @@
 
 <div class="cover">
     <h1>திருக்குறள்</h1>
-    <p>உலக பொதுமறை, பொய்யாமொழி, தெய்வநூல் என பொற்றபடும் திருக்குறளை கற்றுக்கொள்ளுங்கள்</p>
-    <input placeholder="திருக்குறளைத் தேடுங்கள்" id="search" on:keydown={e => {
+    <p>திருவள்ளுவரின் திருக்குறள் / Tiruvalluvar's Tirukkural</p>
+
+    <input placeholder="திருக்குறளைத் தேடுங்கள் / Search Tirukkural" id="search" on:keydown={e => {
         if (e.key == "Enter")
             parseSearchQuery(document.getElementById('search').value)
     }}>
 
-    <p style="margin-top: 5px;">தேட Enter-ஐ அழுத்தவும்...</p>
+    <p style="margin-top: 5px;">தேட enter-ஐ அழுத்தவும் / Press enter to search.</p>
 </div>
 
-<div class="content">
+<div class="content" id="content">
     {#if loaded.length == 0}
         <p class="tamil">சிறிது நேரம் காத்திருக்கவும்...</p>
+        <p class="english">Please wait for some time...</p>
     {:else}
-
         {#if withinKuralRange(requestedKural)}
             <div class="kural-box">
                 <Kural 
                     kural={loaded[requestedKural - 1]} 
-                    kuralEnn={requestedKural - 1}
+                    kuralEnn={requestedKural}
                 />
+
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <a 
+                    class="kural-button" 
+                    style="min-width: calc(100% - 20px)"
+                    on:click={() => {
+                        updateMainKuralNumber(requestedKural - 1, true);
+                        resetConfig();
+                    }}
+                >இக்குறளை முகப்புப்பக்கத்தில் அமைக்க / Set this kural at homepage</a>
             </div>
 
             <div class="kural-box">
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a on:click={() => resetConfig()} class="bth-link">
-                    <p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா?</p>
-                    <p class="english"> Back to Homepage?</p>
+                    <p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா? Back to Homepage?</p>
                 </a>
             </div>
         {:else if requestedKural}
             <div class="kural-box">
                 <div class="tamil">குறள் எண் {requestedKural} திருக்குறளில் இல்லை</div>
+                <div class="english">Kural number {requestedKural} does not exists in Tirukkural.</div>
 
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a on:click={() => resetConfig()} class="bth-link">
@@ -133,40 +143,49 @@
                 <div class="kural-box">
                     <MiniKural result={result}/>
                     <!-- svelte-ignore a11y-missing-attribute -->
-                    <a class="kural-button" on:click={() => showKuralByNumber(result.i + 1)}>மேலும் படிக்க</a>
+                    <a class="kural-button" on:click={() => resetConfig(result.i + 1)}>மேலும் படிக்க / Read More</a>
                 </div>
             {/each}
 
             {#if searchResults.length == 0}
                 <div class="kural-box">
                     <div class="tamil">"{searchQuery}" என்னும் குறளை கண்டுபிடிக்க முடியவில்லை...</div>
+                    <div class="english">Cannot find results for "{searchQuery}"...</div>
                 </div>
             {:else}
                 <br/>
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <a class="kural-button" on:click={() => updateSearchPageIndex(-1)}>முந்தைய குறட்கள்</a>
+                <a class="kural-button" on:click={() => updateSearchPageIndex(-1)}>முந்தைய குறட்கள் / Previous Kurals</a>
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <a class="kural-button" on:click={() => updateSearchPageIndex(1)}>அடுத்த குறட்கள்</a>
+                <a class="kural-button" on:click={() => updateSearchPageIndex(1)}>அடுத்த குறட்கள் / Next Kurals</a>
+
+                <h3 class="tamil bold">Page / பக்கம் {searchPageIndex}/{Math.ceil(searchResults.length / 10)}</h3>
             {/if}
 
             <div class="kural-box">
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a on:click={() => resetConfig()} class="bth-link">
-                    <p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா?</p>
-                    <p class="english"> Back to Homepage?</p>
+                    <p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா? Back to Homepage?</p>
                 </a>
             </div>
         {:else}
             <div class="kural-box">
                 <Kural 
-                    kural={loaded[dailyKuralNumber]} 
-                    kuralEnn={dailyKuralNumber}
+                    kural={loaded[mainKuralNumber]} 
+                    kuralEnn={mainKuralNumber + 1}
                 />
 
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <a class="kural-button" on:click={() => updateDailyKuralNumber(-1)}>முந்தைய குறள்</a>
+                <a class="kural-button" on:click={() => updateMainKuralNumber(-1)}>முந்தைய குறள் / Previous Kural</a>
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <a class="kural-button" on:click={() => updateDailyKuralNumber(1)}>அடுத்த குறள்</a>
+                <a class="kural-button" on:click={() => updateMainKuralNumber(1)}>அடுத்த குறள் / Next Kural</a>
+            </div>
+
+            <div class="kural-box">
+                <Index on:request={({ detail }) => {
+                    updateMainKuralNumber(detail.start - 1, true);
+                    document.getElementById('content').scrollIntoView()
+                }}/>
             </div>
         {/if}
     {/if}

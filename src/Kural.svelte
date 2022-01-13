@@ -4,59 +4,54 @@
 
     let section, chapter, subChapter;
 
-    function findKuralDetails () {
-        let ke = kuralEnn + 1;
+    $: for (let i = 0; i < window.kuralIndices.length; i++) {
+        let [start, end] = window.kuralIndices[i].kurals;
 
-        for (let i = 0; i < window.kuralIndices.length; i++) {
-            let [start, end] = window.kuralIndices[i].kurals;
+        if (kuralEnn <= end && kuralEnn >= start) {
+            let section1 = window.kuralIndices[i];
+            section = [section1.name, section1.translation];
 
-            if (ke <= end && ke >= start) {
-                let section1 = window.kuralIndices[i];
-                section = [section1.name, section1.translation];
+            for (let i = 0; i < section1.chapters.length; i++) {
+                [start, end] = section1.chapters[i].kurals;
 
-                for (let i = 0; i < section1.chapters.length; i++) {
-                    [start, end] = section1.chapters[i].kurals;
+                if (kuralEnn <= end && kuralEnn >= start) {
+                let chapter1 = section1.chapters[i];
+                chapter = [chapter1.name, chapter1.translation];
 
-                    if (ke <= end && ke >= start) {
-                        let chapter1 = section1.chapters[i];
-                        chapter = [chapter1.name, chapter1.translation];
+                    for (let i = 0; i < chapter1.chapters.length; i++) {
+                        [start, end] = chapter1.chapters[i].se;
 
-                        for (let i = 0; i < chapter1.chapters.length; i++) {
-                            [start, end] = chapter1.chapters[i].se;
-
-                            if (ke <= end && ke >= start) {
-                                let subChapter1 = chapter1.chapters[i];
-                                return subChapter = [subChapter1.name, subChapter1.translation];
-                            }
+                        if (kuralEnn <= end && kuralEnn >= start) {
+                            let subChapter1 = chapter1.chapters[i];
+                            subChapter = [subChapter1.name, subChapter1.translation];
+                            break;
                         }
-
-                        return;
                     }
+
+                    break;
                 }
-                
-                return;
             }
+                
+            break;
         }
     }
-
-    findKuralDetails()
 </script>
 
-<p class="tamil">குறள் {kuralEnn + 1}</p>
+<p class="tamil">குறள் {kuralEnn} / Kural {kuralEnn}</p>
 
 {#each kural.li.split('\n') as ln}
     <p class="tamil kural-line">{ln}</p>
 {/each}
 
 <div class="vilakam">
-    <p class="tamil translated kural-bold">பால் </p><p class="english translated kural-bold">/Section: </p>
-    <p class="tamil translated">{section[0]}</p><p class="english translated">/{section[1]}</p><br/>
+    <p class="tamil translated kural-bold">பால் / Section: </p>
+    <p class="tamil translated">{section[0]} / {section[1]}</p><br/>
 
-    <p class="tamil translated kural-bold">இயல் </p><p class="english translated kural-bold">/Chapter: </p>
-    <p class="tamil translated">{chapter[0]}</p><p class="english translated">/{chapter[1]}</p><br/>
+    <p class="tamil translated kural-bold">இயல் / Chapter: </p>
+    <p class="tamil translated">{chapter[0]} / {chapter[1]}</p><br/>
 
-    <p class="tamil translated kural-bold">அதிகாரம் </p><p class="english translated kural-bold">/Sub-Chapter: </p>
-    <p class="tamil translated">{subChapter[0]}</p><p class="english translated">/{subChapter[1]}</p>
+    <p class="tamil translated kural-bold">அதிகாரம் / Sub-Chapter: </p>
+    <p class="tamil translated">{subChapter[0]} / {subChapter[1]}</p>
 </div>
 
 <div class="vilakam">

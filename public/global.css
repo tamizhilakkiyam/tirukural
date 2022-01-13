@@ -60,6 +60,7 @@ body {
 	margin-top: 5px;
 	width: 100%;
 	font-size: 18px;
+	font-family: "Hind Madurai";
 }
 
 .content p {
@@ -84,10 +85,11 @@ body {
 	background-color: #f0da1a;
 	color: black;
 	padding: 5px;
-	min-width: 20%;
+	min-width: 25%;
 	text-align: center;
 	font-weight: bold;
 	display: inline-block;
+	font-family: "Hind Madurai";
 }
 
 .vilakam {
@@ -132,6 +134,35 @@ body {
 	line-height: 1.5;
 }
 
+.indices h1 {
+	margin-bottom: 10px;
+}
+
+.indices h3, .indices h4, .indices h5, .indices h1 {
+	margin: 0;
+	cursor: pointer;
+}
+
+.indices h3:hover, .indices h4:hover, .indices h5:hover {
+	text-decoration: underline;
+}
+
+.indices h4 {
+	margin-left: 10px;
+}
+
+.indices h5 {
+	margin-left: 22px;
+}
+
+.indices h3 {
+	margin-top: 5px;
+}
+
+.indices h4 {
+	margin-top: 5px;
+}
+
 .footer {
 	padding: 40px 80px;
 	background-color: #f0da1a;
@@ -152,6 +183,10 @@ body {
 	font-weight: bold;
 }
 
+.indices h3, .indices h4 {
+	font-weight: bold;
+}
+
 @media (max-width: 500px) {
 	.cover, .content, .footer {
 		padding: 30px 60px;
@@ -159,5 +194,11 @@ body {
 
 	.cover h1 {
 		font-size: 40px;
+	}
+
+	.kural-button {
+		width: calc(100% - 20px);
+		font-size: 14px;
+		margin-bottom: 0;
 	}
 }
