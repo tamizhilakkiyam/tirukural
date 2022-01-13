@@ -186,12 +186,14 @@ body {
 .indices h4 {
 	display: flex;
 	flex-wrap: nowrap;
+	margin-bottom: 0;
 }
 
 .indices h4 p {
 	display: inline-block;
 	margin-left: 5px;
 	margin-top: -1px;
+	margin-bottom: 0;
 }
 
 .indices h4 p:hover {

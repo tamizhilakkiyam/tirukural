@@ -28,19 +28,22 @@
         if (!isNaN(intParsed)) return requestedKural = intParsed;
         requestedKural = null;
 
-        if (query.length < 5) 
-            return alert("வினவல் குறைந்தது 5 எழுத்துகள் நீளமாக இருக்க வேண்டும். Query must be atleast 5 characters long.");
-
         let results = [];
         searchQuery = query;
 
         if (query.replace(' ', '').match(englishLetterRegex)) {
+            if (query.length < 5) 
+                return alert("Query must be atleast 5 characters long for search in english to prevent website crash.");
+
             query = query.toProperCase();
             for (let i = 0; i < loaded.length; i++) {
                 let kural = loaded[i];
                 if (kural.tlr.includes(query)) results.push({ kural, i });
             }
         } else 
+            if (query.length < 3) 
+                alert("இணையதள செயலிழப்பை தடுக்க வினவல் குறைந்தது 5 எழுத்துகள் நீளமாக இருக்க வேண்டும்.")
+
             for (let i = 0; i < loaded.length; i++) {
                 let kural = loaded[i];
                 if (kural.li.includes(query)) results.push({ kural, i });
@@ -155,9 +158,9 @@
             {:else}
                 <br/>
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <a class="kural-button" on:click={() => updateSearchPageIndex(-1)}>முந்தைய குறட்கள் / Previous Kurals</a>
+                <a class="kural-button" on:click={() => updateSearchPageIndex(-1)}>முந்தைய பக்கம் / Previous Page</a>
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <a class="kural-button" on:click={() => updateSearchPageIndex(1)}>அடுத்த குறட்கள் / Next Kurals</a>
+                <a class="kural-button" on:click={() => updateSearchPageIndex(1)}>அடுத்த பக்கம் / Next Page</a>
 
                 <h3 class="tamil bold">Page / பக்கம் {searchPageIndex}/{Math.ceil(searchResults.length / 10)}</h3>
             {/if}
