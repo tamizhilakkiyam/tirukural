@@ -103,29 +103,29 @@ body {
 	margin-top: -10px;
 }
 
-.tlp {
+/* .tlp {
 	font-weight: bold;
 	font-size: 25px;
 	margin-bottom: 20px;
 	display: block;
-}
+}  */
 
-.taen p {
+.bth-link p {
 	display: inline-block;
 	color: black;
 	cursor: pointer;
 	font-weight: bold;
 }
 
-.taen {
+.bth-link {
 	text-decoration: none;
 }
 
-.taen:hover, .taen:hover p {
+.bth-link:hover, .bth-link:hover p {
 	text-decoration: underline;
 }
 
-.ktlr {
+.translated {
 	display: inline-block;
 	color: black;
 	line-height: 1.5;

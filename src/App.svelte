@@ -50,7 +50,7 @@
             </div>
 
             <div class="kural-box">
-                <a href="/" class="taen">
+                <a href="/" class="bth-link">
                     <p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா?</p>
                     <p class="english"> Back to Homepage?</p>
                 </a>
@@ -59,7 +59,7 @@
             <div class="kural-box">
                 <div class="tamil">குறள் எண் {requestedKural} திருக்குறளில் இல்லை</div>
 
-                <a href="/" class="taen">
+                <a href="/" class="bth-link">
                     <p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா?</p>
                     <p class="english"> Back to Homepage?</p>
                 </a>

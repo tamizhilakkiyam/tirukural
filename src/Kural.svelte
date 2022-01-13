@@ -49,14 +49,14 @@
 {/each}
 
 <div class="vilakam">
-    <p class="tamil ktlr kural-bold">பால் </p><p class="english ktlr kural-bold">/Section: </p>
-    <p class="tamil ktlr">{section[0]}</p><p class="english ktlr">/{section[1]}</p><br/>
+    <p class="tamil translated kural-bold">பால் </p><p class="english translated kural-bold">/Section: </p>
+    <p class="tamil translated">{section[0]}</p><p class="english translated">/{section[1]}</p><br/>
 
-    <p class="tamil ktlr kural-bold">இயல் </p><p class="english ktlr kural-bold">/Chapter: </p>
-    <p class="tamil ktlr">{chapter[0]}</p><p class="english ktlr">/{chapter[1]}</p><br/>
+    <p class="tamil translated kural-bold">இயல் </p><p class="english translated kural-bold">/Chapter: </p>
+    <p class="tamil translated">{chapter[0]}</p><p class="english translated">/{chapter[1]}</p><br/>
 
-    <p class="tamil ktlr kural-bold">அதிகாரம் </p><p class="english ktlr kural-bold">/Sub-Chapter: </p>
-    <p class="tamil ktlr">{subChapter[0]}</p><p class="english ktlr">/{subChapter[1]}</p>
+    <p class="tamil translated kural-bold">அதிகாரம் </p><p class="english translated kural-bold">/Sub-Chapter: </p>
+    <p class="tamil translated">{subChapter[0]}</p><p class="english translated">/{subChapter[1]}</p>
 </div>
 
 <div class="vilakam">
