@@ -1,1 +1,2935 @@
-var app=function(){"use strict";function t(){}function n(t){return t()}function e(){return Object.create(null)}function l(t){t.forEach(n)}function r(t){return"function"==typeof t}function a(t,n){return t!=t?n==n:t!==n||t&&"object"==typeof t||"function"==typeof t}function s(t,n){t.appendChild(n)}function o(t,n,e){t.insertBefore(n,e||null)}function c(t){t.parentNode.removeChild(t)}function i(t,n){for(let e=0;e<t.length;e+=1)t[e]&&t[e].d(n)}function u(t){return document.createElement(t)}function f(t){return document.createTextNode(t)}function h(){return f(" ")}function d(t,n,e,l){return t.addEventListener(n,e,l),()=>t.removeEventListener(n,e,l)}function p(t,n,e){null==e?t.removeAttribute(n):t.getAttribute(n)!==e&&t.setAttribute(n,e)}function g(t,n){n=""+n,t.wholeText!==n&&(t.data=n)}function m(t,n,e,l){t.style.setProperty(n,e,l?"important":"")}let k;function $(t){k=t}function b(){const t=function(){if(!k)throw new Error("Function called outside component initialization");return k}();return(n,e)=>{const l=t.$$.callbacks[n];if(l){const r=function(t,n,e=!1){const l=document.createEvent("CustomEvent");return l.initCustomEvent(t,e,!1,n),l}(n,e);l.slice().forEach((n=>{n.call(t,r)}))}}}const x=[],v=[],w=[],C=[],y=Promise.resolve();let E=!1;function _(t){w.push(t)}const I=new Set;let T=0;function N(){const t=k;do{for(;T<x.length;){const t=x[T];T++,$(t),M(t.$$)}for($(null),x.length=0,T=0;v.length;)v.pop()();for(let t=0;t<w.length;t+=1){const n=w[t];I.has(n)||(I.add(n),n())}w.length=0}while(x.length);for(;C.length;)C.pop()();E=!1,I.clear(),$(t)}function M(t){if(null!==t.fragment){t.update(),l(t.before_update);const n=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,n),t.after_update.forEach(_)}}const P=new Set;let L;function S(){L={r:0,c:[],p:L}}function H(){L.r||l(L.c),L=L.p}function B(t,n){t&&t.i&&(P.delete(t),t.i(n))}function A(t,n,e,l){if(t&&t.o){if(P.has(t))return;P.add(t),L.c.push((()=>{P.delete(t),l&&(e&&t.d(1),l())})),t.o(n)}}function j(t){t&&t.c()}function q(t,e,a,s){const{fragment:o,on_mount:c,on_destroy:i,after_update:u}=t.$$;o&&o.m(e,a),s||_((()=>{const e=c.map(n).filter(r);i?i.push(...e):l(e),t.$$.on_mount=[]})),u.forEach(_)}function K(t,n){const e=t.$$;null!==e.fragment&&(l(e.on_destroy),e.fragment&&e.fragment.d(n),e.on_destroy=e.fragment=null,e.ctx=[])}function z(t,n){-1===t.$$.dirty[0]&&(x.push(t),E||(E=!0,y.then(N)),t.$$.dirty.fill(0)),t.$$.dirty[n/31|0]|=1<<n%31}function R(n,r,a,s,o,i,u,f=[-1]){const h=k;$(n);const d=n.$$={fragment:null,ctx:null,props:i,update:t,not_equal:o,bound:e(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(r.context||(h?h.$$.context:[])),callbacks:e(),dirty:f,skip_bound:!1,root:r.target||h.$$.root};u&&u(d.root);let p=!1;if(d.ctx=a?a(n,r.props||{},((t,e,...l)=>{const r=l.length?l[0]:e;return d.ctx&&o(d.ctx[t],d.ctx[t]=r)&&(!d.skip_bound&&d.bound[t]&&d.bound[t](r),p&&z(n,t)),e})):[],d.update(),p=!0,l(d.before_update),d.fragment=!!s&&s(d.ctx),r.target){if(r.hydrate){const t=function(t){return Array.from(t.childNodes)}(r.target);d.fragment&&d.fragment.l(t),t.forEach(c)}else d.fragment&&d.fragment.c();r.intro&&B(n.$$.fragment),q(n,r.target,r.anchor,r.customElement),N()}$(h)}class D{$destroy(){K(this,1),this.$destroy=t}$on(t,n){const e=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return e.push(n),()=>{const t=e.indexOf(n);-1!==t&&e.splice(t,1)}}$set(t){var n;this.$$set&&(n=t,0!==Object.keys(n).length)&&(this.$$.skip_bound=!0,this.$$set(t),this.$$.skip_bound=!1)}}function F(t,n,e){const l=t.slice();return l[5]=n[e],l}function O(t,n,e){const l=t.slice();return l[5]=n[e],l}function G(t){let n,e,l=t[5]+"";return{c(){n=u("p"),e=f(l),p(n,"class","tamil kural-line")},m(t,l){o(t,n,l),s(n,e)},p(t,n){1&n&&l!==(l=t[5]+"")&&g(e,l)},d(t){t&&c(n)}}}function U(t){let n,e,l=t[5]+"";return{c(){n=u("p"),e=f(l),p(n,"class","english kural-english")},m(t,l){o(t,n,l),s(n,e)},p(t,n){1&n&&l!==(l=t[5]+"")&&g(e,l)},d(t){t&&c(n)}}}function Y(n){let e,l,r,a,d,m,k,$,b,x,v,w,C,y,E,_,I,T,N,M,P,L,S,H,B,A,j,q,K,z,R,D,Y,Q,V,Z,J,W,X,tt,nt,et,lt,rt,at,st,ot,ct,it,ut,ft,ht,dt,pt,gt,mt,kt,$t,bt,xt,vt,wt,Ct=n[2][0]+"",yt=n[2][1]+"",Et=n[3][0]+"",_t=n[3][1]+"",It=n[4][0]+"",Tt=n[4][1]+"",Nt=n[0].def[0]+"",Mt=n[0].def[1]+"",Pt=n[0].def[2]+"",Lt=n[0].cpl+"",St=n[0].tl+"",Ht=n[0].li.split("\n"),Bt=[];for(let t=0;t<Ht.length;t+=1)Bt[t]=G(O(n,Ht,t));let At=n[0].tlr.split("\n"),jt=[];for(let t=0;t<At.length;t+=1)jt[t]=U(F(n,At,t));return{c(){e=u("p"),l=f("குறள் "),r=f(n[1]),a=f(" / Kural "),d=f(n[1]),m=h();for(let t=0;t<Bt.length;t+=1)Bt[t].c();k=h(),$=u("div"),b=u("p"),b.textContent="பால் / Section:",x=h(),v=u("p"),w=f(Ct),C=f(" / "),y=f(yt),E=u("br"),_=h(),I=u("p"),I.textContent="இயல் / ChapterGroup:",T=h(),N=u("p"),M=f(Et),P=f(" / "),L=f(_t),S=u("br"),H=h(),B=u("p"),B.textContent="அதிகாரம் / Chapter:",A=h(),j=u("p"),q=f(It),K=f(" / "),z=f(Tt),R=h(),D=u("div"),Y=u("p"),Y.textContent="மு.வரதராசன் அவர்களின் விளக்கம்",Q=h(),V=u("p"),Z=f(Nt),J=h(),W=u("div"),X=u("p"),X.textContent="சாலமன் பாப்பையா அவர்களின் விளக்கம்",tt=h(),nt=u("p"),et=f(Mt),lt=h(),rt=u("div"),at=u("p"),at.textContent="சிவயோகி சிவக்குமார் அவர்களின் விளக்கம்",st=h(),ot=u("p"),ct=f(Pt),it=h(),ut=u("div"),ft=u("p"),ft.textContent="English Couplet",ht=h(),dt=u("p"),pt=f(Lt),gt=h(),mt=u("p"),mt.textContent="English Definition",kt=h(),$t=u("p"),bt=f(St),xt=h(),vt=u("p"),vt.textContent="English Transliteration",wt=h();for(let t=0;t<jt.length;t+=1)jt[t].c();p(e,"class","tamil"),p(b,"class","tamil translated kural-bold"),p(v,"class","tamil translated"),p(I,"class","tamil translated kural-bold"),p(N,"class","tamil translated"),p(B,"class","tamil translated kural-bold"),p(j,"class","tamil translated"),p($,"class","vilakam"),p(Y,"class","tamil kural-bold"),p(V,"class","tamil"),p(D,"class","vilakam"),p(X,"class","tamil kural-bold"),p(nt,"class","tamil"),p(W,"class","vilakam"),p(at,"class","tamil kural-bold"),p(ot,"class","tamil"),p(rt,"class","vilakam"),p(ft,"class","english kural-bold"),p(dt,"class","english kural-english"),p(mt,"class","english kural-bold"),p($t,"class","english kural-english"),p(vt,"class","english kural-bold"),p(ut,"class","vilakam")},m(t,n){o(t,e,n),s(e,l),s(e,r),s(e,a),s(e,d),o(t,m,n);for(let e=0;e<Bt.length;e+=1)Bt[e].m(t,n);o(t,k,n),o(t,$,n),s($,b),s($,x),s($,v),s(v,w),s(v,C),s(v,y),s($,E),s($,_),s($,I),s($,T),s($,N),s(N,M),s(N,P),s(N,L),s($,S),s($,H),s($,B),s($,A),s($,j),s(j,q),s(j,K),s(j,z),o(t,R,n),o(t,D,n),s(D,Y),s(D,Q),s(D,V),s(V,Z),o(t,J,n),o(t,W,n),s(W,X),s(W,tt),s(W,nt),s(nt,et),o(t,lt,n),o(t,rt,n),s(rt,at),s(rt,st),s(rt,ot),s(ot,ct),o(t,it,n),o(t,ut,n),s(ut,ft),s(ut,ht),s(ut,dt),s(dt,pt),s(ut,gt),s(ut,mt),s(ut,kt),s(ut,$t),s($t,bt),s(ut,xt),s(ut,vt),s(ut,wt);for(let t=0;t<jt.length;t+=1)jt[t].m(ut,null)},p(t,[n]){if(2&n&&g(r,t[1]),2&n&&g(d,t[1]),1&n){let e;for(Ht=t[0].li.split("\n"),e=0;e<Ht.length;e+=1){const l=O(t,Ht,e);Bt[e]?Bt[e].p(l,n):(Bt[e]=G(l),Bt[e].c(),Bt[e].m(k.parentNode,k))}for(;e<Bt.length;e+=1)Bt[e].d(1);Bt.length=Ht.length}if(4&n&&Ct!==(Ct=t[2][0]+"")&&g(w,Ct),4&n&&yt!==(yt=t[2][1]+"")&&g(y,yt),8&n&&Et!==(Et=t[3][0]+"")&&g(M,Et),8&n&&_t!==(_t=t[3][1]+"")&&g(L,_t),16&n&&It!==(It=t[4][0]+"")&&g(q,It),16&n&&Tt!==(Tt=t[4][1]+"")&&g(z,Tt),1&n&&Nt!==(Nt=t[0].def[0]+"")&&g(Z,Nt),1&n&&Mt!==(Mt=t[0].def[1]+"")&&g(et,Mt),1&n&&Pt!==(Pt=t[0].def[2]+"")&&g(ct,Pt),1&n&&Lt!==(Lt=t[0].cpl+"")&&g(pt,Lt),1&n&&St!==(St=t[0].tl+"")&&g(bt,St),1&n){let e;for(At=t[0].tlr.split("\n"),e=0;e<At.length;e+=1){const l=F(t,At,e);jt[e]?jt[e].p(l,n):(jt[e]=U(l),jt[e].c(),jt[e].m(ut,null))}for(;e<jt.length;e+=1)jt[e].d(1);jt.length=At.length}},i:t,o:t,d(t){t&&c(e),t&&c(m),i(Bt,t),t&&c(k),t&&c($),t&&c(R),t&&c(D),t&&c(J),t&&c(W),t&&c(lt),t&&c(rt),t&&c(it),t&&c(ut),i(jt,t)}}}function Q(t,n,e){let l,r,a,{kural:s}=n,{kuralEnn:o}=n;return t.$$set=t=>{"kural"in t&&e(0,s=t.kural),"kuralEnn"in t&&e(1,o=t.kuralEnn)},t.$$.update=()=>{if(2&t.$$.dirty)for(let t=0;t<window.kuralIndices.length;t++){let[n,s]=window.kuralIndices[t].kurals;if(o<=s&&o>=n){let c=window.kuralIndices[t];e(2,l=[c.name,c.translation]);for(let t=0;t<c.chapters.length;t++)if([n,s]=c.chapters[t].kurals,o<=s&&o>=n){let l=c.chapters[t];e(3,r=[l.name,l.translation]);for(let t=0;t<l.chapters.length;t++)if([n,s]=l.chapters[t].se,o<=s&&o>=n){let n=l.chapters[t];e(4,a=[n.name,n.translation]);break}break}break}}},[s,o,l,r,a]}class V extends D{constructor(t){super(),R(this,t,Q,Y,a,{kural:0,kuralEnn:1})}}function Z(t,n,e){const l=t.slice();return l[1]=n[e],l}function J(t){let n,e,l=t[1]+"";return{c(){n=u("p"),e=f(l),p(n,"class","tamil kural-line")},m(t,l){o(t,n,l),s(n,e)},p(t,n){1&n&&l!==(l=t[1]+"")&&g(e,l)},d(t){t&&c(n)}}}function W(n){let e,l,r,a,d,m,k,$,b,x=n[0].i+1+"",v=n[0].i+1+"",w=n[0].kural.tl+"",C=n[0].kural.li.split("\n"),y=[];for(let t=0;t<C.length;t+=1)y[t]=J(Z(n,C,t));return{c(){e=u("p"),l=f("குறள் "),r=f(x),a=f(" / Kural "),d=f(v),m=h();for(let t=0;t<y.length;t+=1)y[t].c();k=h(),$=u("p"),b=f(w),p(e,"class","tamil"),p($,"class","english")},m(t,n){o(t,e,n),s(e,l),s(e,r),s(e,a),s(e,d),o(t,m,n);for(let e=0;e<y.length;e+=1)y[e].m(t,n);o(t,k,n),o(t,$,n),s($,b)},p(t,[n]){if(1&n&&x!==(x=t[0].i+1+"")&&g(r,x),1&n&&v!==(v=t[0].i+1+"")&&g(d,v),1&n){let e;for(C=t[0].kural.li.split("\n"),e=0;e<C.length;e+=1){const l=Z(t,C,e);y[e]?y[e].p(l,n):(y[e]=J(l),y[e].c(),y[e].m(k.parentNode,k))}for(;e<y.length;e+=1)y[e].d(1);y.length=C.length}1&n&&w!==(w=t[0].kural.tl+"")&&g(b,w)},i:t,o:t,d(t){t&&c(e),t&&c(m),i(y,t),t&&c(k),t&&c($)}}}function X(t,n,e){let{result:l}=n;return t.$$set=t=>{"result"in t&&e(0,l=t.result)},[l]}class tt extends D{constructor(t){super(),R(this,t,X,W,a,{result:0})}}function nt(t,n,e){const l=t.slice();return l[5]=n[e],l}function et(t,n,e){const l=t.slice();return l[8]=n[e],l}function lt(t,n,e){const l=t.slice();return l[11]=n[e],l}function rt(t){let n,e,l,r,a,i,h,g=t[11].name+"",m=t[11].translation+"";function k(){return t[4](t[11])}return{c(){n=u("h5"),e=f(g),l=f(" / "),r=f(m),a=u("br"),p(n,"class","tamil translated bold clickable")},m(t,c){o(t,n,c),s(n,e),s(n,l),s(n,r),o(t,a,c),i||(h=d(n,"click",k),i=!0)},p(n,e){t=n},d(t){t&&c(n),t&&c(a),i=!1,h()}}}function at(t){let n,e,r,a,g,m,k,$,b,x,v,w,C,y=t[8].name+"",E=t[8].translation+"";function _(){return t[2](t[8])}function I(){return t[3](t[8])}let T=t[8].chapters,N=[];for(let n=0;n<T.length;n+=1)N[n]=rt(lt(t,T,n));return{c(){n=u("h4"),e=u("a"),e.innerHTML='<i class="fas fa-chevron-right"></i>',r=h(),a=u("p"),g=f(y),m=f(" / "),k=f(E),$=h(),b=u("div");for(let t=0;t<N.length;t+=1)N[t].c();x=h(),p(n,"class","tamil translated bold"),p(b,"id",v="cha-"+t[8].kurals[0]),p(b,"class","hidden subcontents")},m(t,l){o(t,n,l),s(n,e),s(n,r),s(n,a),s(a,g),s(a,m),s(a,k),o(t,$,l),o(t,b,l);for(let t=0;t<N.length;t+=1)N[t].m(b,null);s(b,x),w||(C=[d(e,"click",_),d(a,"click",I)],w=!0)},p(n,e){if(t=n,1&e){let n;for(T=t[8].chapters,n=0;n<T.length;n+=1){const l=lt(t,T,n);N[n]?N[n].p(l,e):(N[n]=rt(l),N[n].c(),N[n].m(b,x))}for(;n<N.length;n+=1)N[n].d(1);N.length=T.length}},d(t){t&&c(n),t&&c($),t&&c(b),i(N,t),w=!1,l(C)}}}function st(t){let n,e,l,r,a,g,m,k,$,b=t[5].name+"",x=t[5].translation+"";function v(){return t[1](t[5])}let w=t[5].chapters,C=[];for(let n=0;n<w.length;n+=1)C[n]=at(et(t,w,n));return{c(){n=u("h3"),e=f(b),l=f(" / "),r=f(x),a=u("br"),g=h();for(let t=0;t<C.length;t+=1)C[t].c();m=f(""),p(n,"class","tamil translated bold clickable")},m(t,c){o(t,n,c),s(n,e),s(n,l),s(n,r),o(t,a,c),o(t,g,c);for(let n=0;n<C.length;n+=1)C[n].m(t,c);o(t,m,c),k||($=d(n,"click",v),k=!0)},p(n,e){if(t=n,1&e){let n;for(w=t[5].chapters,n=0;n<w.length;n+=1){const l=et(t,w,n);C[n]?C[n].p(l,e):(C[n]=at(l),C[n].c(),C[n].m(m.parentNode,m))}for(;n<C.length;n+=1)C[n].d(1);C.length=w.length}},d(t){t&&c(n),t&&c(a),t&&c(g),i(C,t),t&&c(m),k=!1,$()}}}function ot(n){let e,l,r,a,f=window.kuralIndices,d=[];for(let t=0;t<f.length;t+=1)d[t]=st(nt(n,f,t));return{c(){e=u("div"),l=u("h1"),l.textContent="பொருளடக்கம் / Index",r=u("br"),a=h();for(let t=0;t<d.length;t+=1)d[t].c();p(l,"class","tamil translated bold"),p(e,"class","indices")},m(t,n){o(t,e,n),s(e,l),s(e,r),s(e,a);for(let t=0;t<d.length;t+=1)d[t].m(e,null)},p(t,[n]){if(1&n){let l;for(f=window.kuralIndices,l=0;l<f.length;l+=1){const r=nt(t,f,l);d[l]?d[l].p(r,n):(d[l]=st(r),d[l].c(),d[l].m(e,null))}for(;l<d.length;l+=1)d[l].d(1);d.length=f.length}},i:t,o:t,d(t){t&&c(e),i(d,t)}}}function ct(t){const n=b();return[n,t=>n("request",{start:t.kurals[0]}),t=>{document.getElementById(`cha-${t.kurals[0]}`).classList.toggle("hidden")},t=>n("request",{start:t.kurals[0]}),t=>n("request",{start:t.se[0]})]}class it extends D{constructor(t){super(),R(this,t,ct,ot,a,{})}}function ut(n){let e,l,r,a,i,f,d,g,m,k,$,b,x,v;return{c(){e=u("div"),l=u("h1"),l.textContent="திருக்குறள்",r=h(),a=u("p"),a.innerHTML='இங்கு பயன்படுத்தப்படும் திருக்குறளின் விவரங்கள் இந்த <a href="https://github.com/tk120404/thirukkural">Repo</a>-வில் இருந்து பெறப்பட்டது...',i=h(),f=u("p"),f.innerHTML='The data used here is borrowed from this <a href="https://github.com/tk120404/thirukkural">Repo</a>...',d=u("br"),g=h(),m=u("p"),m.textContent=`தமிழிலக்கியம் © ${(new Date).getFullYear()}`,k=h(),$=u("p"),$.textContent=`Tamizhilakkiyam © ${(new Date).getFullYear()}`,b=u("br"),x=h(),v=u("a"),v.textContent="Github",p(l,"class","tamil"),p(a,"class","tamil"),p(f,"class","english"),p(m,"class","tamil bold"),p($,"class","english bold"),p(v,"class","english"),p(v,"href","https://github.com/tamizhilakkiyam/tirukural"),p(e,"class","footer")},m(t,n){o(t,e,n),s(e,l),s(e,r),s(e,a),s(e,i),s(e,f),s(e,d),s(e,g),s(e,m),s(e,k),s(e,$),s(e,b),s(e,x),s(e,v)},p:t,i:t,o:t,d(t){t&&c(e)}}}class ft extends D{constructor(t){super(),R(this,t,null,ut,a,{})}}function ht(t,n,e){const l=t.slice();return l[23]=n[e],l}function dt(t){let n,e,r,a,i,f,g,m,k,$,b,x;return e=new V({props:{kural:t[0][t[3]],kuralEnn:t[3]+1}}),k=new it({}),k.$on("request",t[21]),{c(){n=u("div"),j(e.$$.fragment),r=h(),a=u("a"),a.textContent="முந்தைய குறள் / Previous Kural",i=h(),f=u("a"),f.textContent="அடுத்த குறள் / Next Kural",g=h(),m=u("div"),j(k.$$.fragment),p(a,"class","kural-button"),p(f,"class","kural-button"),p(n,"class","kural-box"),p(m,"class","kural-box")},m(l,c){o(l,n,c),q(e,n,null),s(n,r),s(n,a),s(n,i),s(n,f),o(l,g,c),o(l,m,c),q(k,m,null),$=!0,b||(x=[d(a,"click",t[19]),d(f,"click",t[20])],b=!0)},p(t,n){const l={};9&n&&(l.kural=t[0][t[3]]),8&n&&(l.kuralEnn=t[3]+1),e.$set(l)},i(t){$||(B(e.$$.fragment,t),B(k.$$.fragment,t),$=!0)},o(t){A(e.$$.fragment,t),A(k.$$.fragment,t),$=!1},d(t){t&&c(n),K(e),t&&c(g),t&&c(m),K(k),b=!1,l(x)}}}function pt(t){let n,e,l,r,a,f,g,m=t[1].slice(6*(t[2]-1),6*t[2]),k=[];for(let n=0;n<m.length;n+=1)k[n]=$t(ht(t,m,n));const $=t=>A(k[t],1,1,(()=>{k[t]=null}));function b(t,n){return 0==t[1].length?xt:bt}let x=b(t),v=x(t);return{c(){for(let t=0;t<k.length;t+=1)k[t].c();n=h(),v.c(),e=h(),l=u("div"),r=u("a"),r.innerHTML='<p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா? Back to Homepage?</p>',p(r,"class","bth-link"),p(l,"class","kural-box")},m(c,i){for(let t=0;t<k.length;t+=1)k[t].m(c,i);o(c,n,i),v.m(c,i),o(c,e,i),o(c,l,i),s(l,r),a=!0,f||(g=d(r,"click",t[18]),f=!0)},p(t,l){if(518&l){let e;for(m=t[1].slice(6*(t[2]-1),6*t[2]),e=0;e<m.length;e+=1){const r=ht(t,m,e);k[e]?(k[e].p(r,l),B(k[e],1)):(k[e]=$t(r),k[e].c(),B(k[e],1),k[e].m(n.parentNode,n))}for(S(),e=m.length;e<k.length;e+=1)$(e);H()}x===(x=b(t))&&v?v.p(t,l):(v.d(1),v=x(t),v&&(v.c(),v.m(e.parentNode,e)))},i(t){if(!a){for(let t=0;t<m.length;t+=1)B(k[t]);a=!0}},o(t){k=k.filter(Boolean);for(let t=0;t<k.length;t+=1)A(k[t]);a=!1},d(t){i(k,t),t&&c(n),v.d(t),t&&c(e),t&&c(l),f=!1,g()}}}function gt(n){let e,l,r,a,i,m,k,$,b,x,v,w,C,y;return{c(){e=u("div"),l=u("div"),r=f("குறள் எண் "),a=f(n[5]),i=f(" திருக்குறளில் இல்லை"),m=h(),k=u("div"),$=f("Kural number "),b=f(n[5]),x=f(" does not exists in Tirukkural."),v=h(),w=u("a"),w.innerHTML='<p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா?</p> \n                    <p class="english">Back to Homepage?</p>',p(l,"class","tamil"),p(k,"class","english"),p(w,"class","bth-link"),p(e,"class","kural-box")},m(t,c){o(t,e,c),s(e,l),s(l,r),s(l,a),s(l,i),s(e,m),s(e,k),s(k,$),s(k,b),s(k,x),s(e,v),s(e,w),C||(y=d(w,"click",n[14]),C=!0)},p(t,n){32&n&&g(a,t[5]),32&n&&g(b,t[5])},i:t,o:t,d(t){t&&c(e),C=!1,y()}}}function mt(t){let n,e,r,a,i,f,g,k,$,b;return e=new V({props:{kural:t[0][t[5]-1],kuralEnn:t[5]}}),{c(){n=u("div"),j(e.$$.fragment),r=h(),a=u("a"),a.textContent="இக்குறளை முகப்புப்பக்கத்தில் அமைக்க / Set this kural at homepage",i=h(),f=u("div"),g=u("a"),g.innerHTML='<p class="tamil">முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா? Back to Homepage?</p>',p(a,"class","kural-button"),m(a,"min-width","calc(100% - 20px)"),p(n,"class","kural-box"),p(g,"class","bth-link"),p(f,"class","kural-box")},m(l,c){o(l,n,c),q(e,n,null),s(n,r),s(n,a),o(l,i,c),o(l,f,c),s(f,g),k=!0,$||(b=[d(a,"click",t[12]),d(g,"click",t[13])],$=!0)},p(t,n){const l={};33&n&&(l.kural=t[0][t[5]-1]),32&n&&(l.kuralEnn=t[5]),e.$set(l)},i(t){k||(B(e.$$.fragment,t),k=!0)},o(t){A(e.$$.fragment,t),k=!1},d(t){t&&c(n),K(e),t&&c(i),t&&c(f),$=!1,l(b)}}}function kt(n){let e,l,r;return{c(){e=u("p"),e.textContent="சிறிது நேரம் காத்திருக்கவும்...",l=h(),r=u("p"),r.textContent="Please wait for some time...",p(e,"class","tamil"),p(r,"class","english")},m(t,n){o(t,e,n),o(t,l,n),o(t,r,n)},p:t,i:t,o:t,d(t){t&&c(e),t&&c(l),t&&c(r)}}}function $t(t){let n,e,l,r,a,i,f;function g(){return t[15](t[23])}return e=new tt({props:{result:t[23]}}),{c(){n=u("div"),j(e.$$.fragment),l=h(),r=u("a"),r.textContent="மேலும் படிக்க / Read More",p(r,"class","kural-button"),p(n,"class","kural-box")},m(t,c){o(t,n,c),q(e,n,null),s(n,l),s(n,r),a=!0,i||(f=d(r,"click",g),i=!0)},p(n,l){t=n;const r={};6&l&&(r.result=t[23]),e.$set(r)},i(t){a||(B(e.$$.fragment,t),a=!0)},o(t){A(e.$$.fragment,t),a=!1},d(t){t&&c(n),K(e),i=!1,f()}}}function bt(t){let n,e,r,a,i,m,k,$,b,x,v,w,C,y=Math.ceil(t[1].length/10)+"";return{c(){n=u("br"),e=h(),r=u("a"),r.textContent="முந்தைய பக்கம் / Previous Page",a=h(),i=u("a"),i.textContent="அடுத்த பக்கம் / Next Page",m=h(),k=u("h3"),$=f("Page / பக்கம் "),b=f(t[2]),x=f("/"),v=f(y),p(r,"class","kural-button"),p(i,"class","kural-button"),p(k,"class","tamil bold")},m(l,c){o(l,n,c),o(l,e,c),o(l,r,c),o(l,a,c),o(l,i,c),o(l,m,c),o(l,k,c),s(k,$),s(k,b),s(k,x),s(k,v),w||(C=[d(r,"click",t[16]),d(i,"click",t[17])],w=!0)},p(t,n){4&n&&g(b,t[2]),2&n&&y!==(y=Math.ceil(t[1].length/10)+"")&&g(v,y)},d(t){t&&c(n),t&&c(e),t&&c(r),t&&c(a),t&&c(i),t&&c(m),t&&c(k),w=!1,l(C)}}}function xt(t){let n,e,l,r,a,i,d,m,k,$;return{c(){n=u("div"),e=u("div"),l=f('"'),r=f(t[4]),a=f('" என்னும் குறளை கண்டுபிடிக்க முடியவில்லை...'),i=h(),d=u("div"),m=f('Cannot find results for "'),k=f(t[4]),$=f('"...'),p(e,"class","tamil"),p(d,"class","english"),p(n,"class","kural-box")},m(t,c){o(t,n,c),s(n,e),s(e,l),s(e,r),s(e,a),s(n,i),s(n,d),s(d,m),s(d,k),s(d,$)},p(t,n){16&n&&g(r,t[4]),16&n&&g(k,t[4])},d(t){t&&c(n)}}}function vt(t){let n,e,l,r,a,i,f,g,k,$,b,x,v,w,C,y,E,_;const I=[kt,mt,gt,pt,dt],T=[];function N(t,n){return 0==t[0].length?0:((null==b||32&n)&&(b=!!t[6](t[5])),b?1:t[5]?2:t[1]?3:4)}return x=N(t,-1),v=T[x]=I[x](t),C=new ft({}),{c(){n=u("div"),e=u("h1"),e.textContent="திருக்குறள்",l=h(),r=u("p"),r.textContent="திருவள்ளுவரின் திருக்குறள் / Tiruvalluvar's Tirukkural",a=h(),i=u("input"),f=h(),g=u("p"),g.textContent="தேட enter-ஐ அழுத்தவும் / Press enter to search.",k=h(),$=u("div"),v.c(),w=h(),j(C.$$.fragment),p(i,"placeholder","திருக்குறளைத் தேடுங்கள் / Search Tirukkural"),p(i,"id","search"),m(g,"margin-top","5px"),p(n,"class","cover"),p($,"class","content"),p($,"id","content")},m(c,u){o(c,n,u),s(n,e),s(n,l),s(n,r),s(n,a),s(n,i),s(n,f),s(n,g),o(c,k,u),o(c,$,u),T[x].m($,null),o(c,w,u),q(C,c,u),y=!0,E||(_=d(i,"keydown",t[11]),E=!0)},p(t,[n]){let e=x;x=N(t,n),x===e?T[x].p(t,n):(S(),A(T[e],1,1,(()=>{T[e]=null})),H(),v=T[x],v?v.p(t,n):(v=T[x]=I[x](t),v.c()),B(v,1),v.m($,null))},i(t){y||(B(v),B(C.$$.fragment,t),y=!0)},o(t){A(v),A(C.$$.fragment,t),y=!1},d(t){t&&c(n),t&&c(k),t&&c($),T[x].d(),t&&c(w),K(C,t),E=!1,_()}}}const wt=/^[A-Za-z]+$/;function Ct(t,n,e){const l=new URLSearchParams(window.location.search),r=t=>t>0&&t<=1330;let a=[],s=null,o=1,c=parseInt(localStorage.getItem("kural_no")||"0"),i=l.get("search"),u=parseInt(l.get("kural"));function f(t){if(!t?.length)return;let n=parseInt(t);if(!isNaN(n))return e(5,u=n);e(5,u=null);let l=[];if(e(4,i=t),t.replace(" ","").match(wt)){if(t.length<5)return alert("Query must be atleast 5 characters long for search in english to prevent website crash.");t=t.toProperCase();for(let n=0;n<a.length;n++){let e=a[n];e.tlr.includes(t)&&l.push({kural:e,i:n})}}else t.length<3&&alert("இணையதள செயலிழப்பை தடுக்க வினவல் குறைந்தது 5 எழுத்துகள் நீளமாக இருக்க வேண்டும்.");for(let n=0;n<a.length;n++){let e=a[n];e.li.includes(t)&&l.push({kural:e,i:n})}return e(1,s=l)}function h(t,n){if(console.log(c),n){if(!r(t+1))return;e(3,c=t)}else{if(!r(c+1))return;e(3,c+=t)}localStorage.setItem("kural_no",c)}function d(t=null){e(5,u=t),e(1,s=null),e(2,o=1),e(4,i=null)}function p(t){if(s?.length){let n=o+t;Math.ceil(s.length/10)<n?e(2,o=1):e(2,o=n<=0?Math.ceil(s.length/10):n)}}u=isNaN(u)?null:u,String.prototype.toProperCase=function(){return this.replace(/\w\S*/g,(t=>t.charAt(0).toUpperCase()+t.substr(1).toLowerCase()))},fetch(`${window.location.href}/tirukkural.json`).then((t=>t.json())).then((t=>{e(0,a=t),f(i)}));return[a,s,o,c,i,u,r,f,h,d,p,t=>{"Enter"==t.key&&f(document.getElementById("search").value)},()=>{h(u-1,!0),d()},()=>d(),()=>d(),t=>d(t.i+1),()=>p(-1),()=>p(1),()=>d(),()=>h(-1),()=>h(1),({detail:t})=>{h(t.start-1,!0),document.getElementById("content").scrollIntoView()}]}return new class extends D{constructor(t){super(),R(this,t,Ct,vt,a,{})}}({target:document.body})}();
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_style(node, key, value, important) {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
+    function custom_event(type, detail, bubbles = false) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, bubbles, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+    function get_current_component() {
+        if (!current_component)
+            throw new Error('Function called outside component initialization');
+        return current_component;
+    }
+    function createEventDispatcher() {
+        const component = get_current_component();
+        return (type, detail) => {
+            const callbacks = component.$$.callbacks[type];
+            if (callbacks) {
+                // TODO are there situations where events could be dispatched
+                // in a server (non-DOM) environment?
+                const event = custom_event(type, detail);
+                callbacks.slice().forEach(fn => {
+                    fn.call(component, event);
+                });
+            }
+        };
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    const seen_callbacks = new Set();
+    let flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        const saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (flushidx < dirty_components.length) {
+                const component = dirty_components[flushidx];
+                flushidx++;
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+    }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+    function create_component(block) {
+        block && block.c();
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.44.3' }, detail), true));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.wholeText === data)
+            return;
+        dispatch_dev('SvelteDOMSetData', { node: text, data });
+        text.data = data;
+    }
+    function validate_each_argument(arg) {
+        if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
+            let msg = '{#each} only iterates over array-like objects.';
+            if (typeof Symbol === 'function' && arg && Symbol.iterator in arg) {
+                msg += ' You can use a spread to convert this iterable into an array.';
+            }
+            throw new Error(msg);
+        }
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    /* src\Kural.svelte generated by Svelte v3.44.3 */
+
+    const file$4 = "src\\Kural.svelte";
+
+    function get_each_context$3(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[5] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[5] = list[i];
+    	return child_ctx;
+    }
+
+    // (42:0) {#each kural.li.split('\n') as ln}
+    function create_each_block_1$1(ctx) {
+    	let p;
+    	let t_value = /*ln*/ ctx[5] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "tamil kural-line");
+    			add_location(p, file$4, 42, 4, 1392);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*kural*/ 1 && t_value !== (t_value = /*ln*/ ctx[5] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1$1.name,
+    		type: "each",
+    		source: "(42:0) {#each kural.li.split('\\n') as ln}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (80:4) {#each kural.tlr.split('\n') as ln}
+    function create_each_block$3(ctx) {
+    	let p;
+    	let t_value = /*ln*/ ctx[5] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "english kural-english");
+    			add_location(p, file$4, 80, 8, 2690);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*kural*/ 1 && t_value !== (t_value = /*ln*/ ctx[5] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$3.name,
+    		type: "each",
+    		source: "(80:4) {#each kural.tlr.split('\\n') as ln}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$4(ctx) {
+    	let p0;
+    	let t0;
+    	let t1;
+    	let t2;
+    	let t3;
+    	let t4;
+    	let t5;
+    	let div0;
+    	let p1;
+    	let t7;
+    	let p2;
+    	let t8_value = /*section*/ ctx[2][0] + "";
+    	let t8;
+    	let t9;
+    	let t10_value = /*section*/ ctx[2][1] + "";
+    	let t10;
+    	let br0;
+    	let t11;
+    	let p3;
+    	let t13;
+    	let p4;
+    	let t14_value = /*chapter*/ ctx[3][0] + "";
+    	let t14;
+    	let t15;
+    	let t16_value = /*chapter*/ ctx[3][1] + "";
+    	let t16;
+    	let br1;
+    	let t17;
+    	let p5;
+    	let t19;
+    	let p6;
+    	let t20_value = /*subChapter*/ ctx[4][0] + "";
+    	let t20;
+    	let t21;
+    	let t22_value = /*subChapter*/ ctx[4][1] + "";
+    	let t22;
+    	let t23;
+    	let div1;
+    	let p7;
+    	let t25;
+    	let p8;
+    	let t26_value = /*kural*/ ctx[0].def[0] + "";
+    	let t26;
+    	let t27;
+    	let div2;
+    	let p9;
+    	let t29;
+    	let p10;
+    	let t30_value = /*kural*/ ctx[0].def[1] + "";
+    	let t30;
+    	let t31;
+    	let div3;
+    	let p11;
+    	let t33;
+    	let p12;
+    	let t34_value = /*kural*/ ctx[0].def[2] + "";
+    	let t34;
+    	let t35;
+    	let div4;
+    	let p13;
+    	let t37;
+    	let p14;
+    	let t38_value = /*kural*/ ctx[0].cpl + "";
+    	let t38;
+    	let t39;
+    	let p15;
+    	let t41;
+    	let p16;
+    	let t42_value = /*kural*/ ctx[0].tl + "";
+    	let t42;
+    	let t43;
+    	let p17;
+    	let t45;
+    	let each_value_1 = /*kural*/ ctx[0].li.split('\n');
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*kural*/ ctx[0].tlr.split('\n');
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			p0 = element("p");
+    			t0 = text("குறள் ");
+    			t1 = text(/*kuralEnn*/ ctx[1]);
+    			t2 = text(" / Kural ");
+    			t3 = text(/*kuralEnn*/ ctx[1]);
+    			t4 = space();
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t5 = space();
+    			div0 = element("div");
+    			p1 = element("p");
+    			p1.textContent = "பால் / Section:";
+    			t7 = space();
+    			p2 = element("p");
+    			t8 = text(t8_value);
+    			t9 = text(" / ");
+    			t10 = text(t10_value);
+    			br0 = element("br");
+    			t11 = space();
+    			p3 = element("p");
+    			p3.textContent = "இயல் / ChapterGroup:";
+    			t13 = space();
+    			p4 = element("p");
+    			t14 = text(t14_value);
+    			t15 = text(" / ");
+    			t16 = text(t16_value);
+    			br1 = element("br");
+    			t17 = space();
+    			p5 = element("p");
+    			p5.textContent = "அதிகாரம் / Chapter:";
+    			t19 = space();
+    			p6 = element("p");
+    			t20 = text(t20_value);
+    			t21 = text(" / ");
+    			t22 = text(t22_value);
+    			t23 = space();
+    			div1 = element("div");
+    			p7 = element("p");
+    			p7.textContent = "மு.வரதராசன் அவர்களின் விளக்கம்";
+    			t25 = space();
+    			p8 = element("p");
+    			t26 = text(t26_value);
+    			t27 = space();
+    			div2 = element("div");
+    			p9 = element("p");
+    			p9.textContent = "சாலமன் பாப்பையா அவர்களின் விளக்கம்";
+    			t29 = space();
+    			p10 = element("p");
+    			t30 = text(t30_value);
+    			t31 = space();
+    			div3 = element("div");
+    			p11 = element("p");
+    			p11.textContent = "சிவயோகி சிவக்குமார் அவர்களின் விளக்கம்";
+    			t33 = space();
+    			p12 = element("p");
+    			t34 = text(t34_value);
+    			t35 = space();
+    			div4 = element("div");
+    			p13 = element("p");
+    			p13.textContent = "English Couplet";
+    			t37 = space();
+    			p14 = element("p");
+    			t38 = text(t38_value);
+    			t39 = space();
+    			p15 = element("p");
+    			p15.textContent = "English Definition";
+    			t41 = space();
+    			p16 = element("p");
+    			t42 = text(t42_value);
+    			t43 = space();
+    			p17 = element("p");
+    			p17.textContent = "English Transliteration";
+    			t45 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(p0, "class", "tamil");
+    			add_location(p0, file$4, 39, 0, 1292);
+    			attr_dev(p1, "class", "tamil translated kural-bold");
+    			add_location(p1, file$4, 46, 4, 1468);
+    			attr_dev(p2, "class", "tamil translated");
+    			add_location(p2, file$4, 47, 4, 1533);
+    			add_location(br0, file$4, 47, 63, 1592);
+    			attr_dev(p3, "class", "tamil translated kural-bold");
+    			add_location(p3, file$4, 49, 4, 1605);
+    			attr_dev(p4, "class", "tamil translated");
+    			add_location(p4, file$4, 50, 4, 1675);
+    			add_location(br1, file$4, 50, 63, 1734);
+    			attr_dev(p5, "class", "tamil translated kural-bold");
+    			add_location(p5, file$4, 52, 4, 1747);
+    			attr_dev(p6, "class", "tamil translated");
+    			add_location(p6, file$4, 53, 4, 1816);
+    			attr_dev(div0, "class", "vilakam");
+    			add_location(div0, file$4, 45, 0, 1441);
+    			attr_dev(p7, "class", "tamil kural-bold");
+    			add_location(p7, file$4, 57, 4, 1920);
+    			attr_dev(p8, "class", "tamil");
+    			add_location(p8, file$4, 58, 4, 1988);
+    			attr_dev(div1, "class", "vilakam");
+    			add_location(div1, file$4, 56, 0, 1893);
+    			attr_dev(p9, "class", "tamil kural-bold");
+    			add_location(p9, file$4, 62, 4, 2062);
+    			attr_dev(p10, "class", "tamil");
+    			add_location(p10, file$4, 63, 4, 2134);
+    			attr_dev(div2, "class", "vilakam");
+    			add_location(div2, file$4, 61, 0, 2035);
+    			attr_dev(p11, "class", "tamil kural-bold");
+    			add_location(p11, file$4, 67, 4, 2208);
+    			attr_dev(p12, "class", "tamil");
+    			add_location(p12, file$4, 68, 4, 2284);
+    			attr_dev(div3, "class", "vilakam");
+    			add_location(div3, file$4, 66, 0, 2181);
+    			attr_dev(p13, "class", "english kural-bold");
+    			add_location(p13, file$4, 72, 4, 2358);
+    			attr_dev(p14, "class", "english kural-english");
+    			add_location(p14, file$4, 73, 4, 2413);
+    			attr_dev(p15, "class", "english kural-bold");
+    			add_location(p15, file$4, 75, 4, 2469);
+    			attr_dev(p16, "class", "english kural-english");
+    			add_location(p16, file$4, 76, 4, 2527);
+    			attr_dev(p17, "class", "english kural-bold");
+    			add_location(p17, file$4, 78, 4, 2582);
+    			attr_dev(div4, "class", "vilakam");
+    			add_location(div4, file$4, 71, 0, 2331);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			append_dev(p0, t0);
+    			append_dev(p0, t1);
+    			append_dev(p0, t2);
+    			append_dev(p0, t3);
+    			insert_dev(target, t4, anchor);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, p1);
+    			append_dev(div0, t7);
+    			append_dev(div0, p2);
+    			append_dev(p2, t8);
+    			append_dev(p2, t9);
+    			append_dev(p2, t10);
+    			append_dev(div0, br0);
+    			append_dev(div0, t11);
+    			append_dev(div0, p3);
+    			append_dev(div0, t13);
+    			append_dev(div0, p4);
+    			append_dev(p4, t14);
+    			append_dev(p4, t15);
+    			append_dev(p4, t16);
+    			append_dev(div0, br1);
+    			append_dev(div0, t17);
+    			append_dev(div0, p5);
+    			append_dev(div0, t19);
+    			append_dev(div0, p6);
+    			append_dev(p6, t20);
+    			append_dev(p6, t21);
+    			append_dev(p6, t22);
+    			insert_dev(target, t23, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, p7);
+    			append_dev(div1, t25);
+    			append_dev(div1, p8);
+    			append_dev(p8, t26);
+    			insert_dev(target, t27, anchor);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, p9);
+    			append_dev(div2, t29);
+    			append_dev(div2, p10);
+    			append_dev(p10, t30);
+    			insert_dev(target, t31, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, p11);
+    			append_dev(div3, t33);
+    			append_dev(div3, p12);
+    			append_dev(p12, t34);
+    			insert_dev(target, t35, anchor);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, p13);
+    			append_dev(div4, t37);
+    			append_dev(div4, p14);
+    			append_dev(p14, t38);
+    			append_dev(div4, t39);
+    			append_dev(div4, p15);
+    			append_dev(div4, t41);
+    			append_dev(div4, p16);
+    			append_dev(p16, t42);
+    			append_dev(div4, t43);
+    			append_dev(div4, p17);
+    			append_dev(div4, t45);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div4, null);
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*kuralEnn*/ 2) set_data_dev(t1, /*kuralEnn*/ ctx[1]);
+    			if (dirty & /*kuralEnn*/ 2) set_data_dev(t3, /*kuralEnn*/ ctx[1]);
+
+    			if (dirty & /*kural*/ 1) {
+    				each_value_1 = /*kural*/ ctx[0].li.split('\n');
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(t5.parentNode, t5);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*section*/ 4 && t8_value !== (t8_value = /*section*/ ctx[2][0] + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*section*/ 4 && t10_value !== (t10_value = /*section*/ ctx[2][1] + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*chapter*/ 8 && t14_value !== (t14_value = /*chapter*/ ctx[3][0] + "")) set_data_dev(t14, t14_value);
+    			if (dirty & /*chapter*/ 8 && t16_value !== (t16_value = /*chapter*/ ctx[3][1] + "")) set_data_dev(t16, t16_value);
+    			if (dirty & /*subChapter*/ 16 && t20_value !== (t20_value = /*subChapter*/ ctx[4][0] + "")) set_data_dev(t20, t20_value);
+    			if (dirty & /*subChapter*/ 16 && t22_value !== (t22_value = /*subChapter*/ ctx[4][1] + "")) set_data_dev(t22, t22_value);
+    			if (dirty & /*kural*/ 1 && t26_value !== (t26_value = /*kural*/ ctx[0].def[0] + "")) set_data_dev(t26, t26_value);
+    			if (dirty & /*kural*/ 1 && t30_value !== (t30_value = /*kural*/ ctx[0].def[1] + "")) set_data_dev(t30, t30_value);
+    			if (dirty & /*kural*/ 1 && t34_value !== (t34_value = /*kural*/ ctx[0].def[2] + "")) set_data_dev(t34, t34_value);
+    			if (dirty & /*kural*/ 1 && t38_value !== (t38_value = /*kural*/ ctx[0].cpl + "")) set_data_dev(t38, t38_value);
+    			if (dirty & /*kural*/ 1 && t42_value !== (t42_value = /*kural*/ ctx[0].tl + "")) set_data_dev(t42, t42_value);
+
+    			if (dirty & /*kural*/ 1) {
+    				each_value = /*kural*/ ctx[0].tlr.split('\n');
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$3(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$3(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div4, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t4);
+    			destroy_each(each_blocks_1, detaching);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(t27);
+    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(t31);
+    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(t35);
+    			if (detaching) detach_dev(div4);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$4.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Kural', slots, []);
+    	let { kural } = $$props;
+    	let { kuralEnn } = $$props;
+    	let section, chapter, subChapter;
+    	const writable_props = ['kural', 'kuralEnn'];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Kural> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$$set = $$props => {
+    		if ('kural' in $$props) $$invalidate(0, kural = $$props.kural);
+    		if ('kuralEnn' in $$props) $$invalidate(1, kuralEnn = $$props.kuralEnn);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		kural,
+    		kuralEnn,
+    		section,
+    		chapter,
+    		subChapter
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('kural' in $$props) $$invalidate(0, kural = $$props.kural);
+    		if ('kuralEnn' in $$props) $$invalidate(1, kuralEnn = $$props.kuralEnn);
+    		if ('section' in $$props) $$invalidate(2, section = $$props.section);
+    		if ('chapter' in $$props) $$invalidate(3, chapter = $$props.chapter);
+    		if ('subChapter' in $$props) $$invalidate(4, subChapter = $$props.subChapter);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*kuralEnn*/ 2) {
+    			for (let i = 0; i < window.kuralIndices.length; i++) {
+    				let [start, end] = window.kuralIndices[i].kurals;
+
+    				if (kuralEnn <= end && kuralEnn >= start) {
+    					let section1 = window.kuralIndices[i];
+    					$$invalidate(2, section = [section1.name, section1.translation]);
+
+    					for (let i = 0; i < section1.chapters.length; i++) {
+    						[start, end] = section1.chapters[i].kurals;
+
+    						if (kuralEnn <= end && kuralEnn >= start) {
+    							let chapter1 = section1.chapters[i];
+    							$$invalidate(3, chapter = [chapter1.name, chapter1.translation]);
+
+    							for (let i = 0; i < chapter1.chapters.length; i++) {
+    								[start, end] = chapter1.chapters[i].se;
+
+    								if (kuralEnn <= end && kuralEnn >= start) {
+    									let subChapter1 = chapter1.chapters[i];
+    									$$invalidate(4, subChapter = [subChapter1.name, subChapter1.translation]);
+    									break;
+    								}
+    							}
+
+    							break;
+    						}
+    					}
+
+    					break;
+    				}
+    			}
+    		}
+    	};
+
+    	return [kural, kuralEnn, section, chapter, subChapter];
+    }
+
+    class Kural extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { kural: 0, kuralEnn: 1 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Kural",
+    			options,
+    			id: create_fragment$4.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*kural*/ ctx[0] === undefined && !('kural' in props)) {
+    			console.warn("<Kural> was created without expected prop 'kural'");
+    		}
+
+    		if (/*kuralEnn*/ ctx[1] === undefined && !('kuralEnn' in props)) {
+    			console.warn("<Kural> was created without expected prop 'kuralEnn'");
+    		}
+    	}
+
+    	get kural() {
+    		throw new Error("<Kural>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set kural(value) {
+    		throw new Error("<Kural>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get kuralEnn() {
+    		throw new Error("<Kural>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set kuralEnn(value) {
+    		throw new Error("<Kural>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\MiniKural.svelte generated by Svelte v3.44.3 */
+
+    const file$3 = "src\\MiniKural.svelte";
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[1] = list[i];
+    	return child_ctx;
+    }
+
+    // (7:0) {#each result.kural.li.split('\n') as ln}
+    function create_each_block$2(ctx) {
+    	let p;
+    	let t_value = /*ln*/ ctx[1] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "tamil kural-line");
+    			add_location(p, file$3, 7, 4, 162);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*result*/ 1 && t_value !== (t_value = /*ln*/ ctx[1] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$2.name,
+    		type: "each",
+    		source: "(7:0) {#each result.kural.li.split('\\n') as ln}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$3(ctx) {
+    	let p0;
+    	let t0;
+    	let t1_value = /*result*/ ctx[0].i + 1 + "";
+    	let t1;
+    	let t2;
+    	let t3_value = /*result*/ ctx[0].i + 1 + "";
+    	let t3;
+    	let t4;
+    	let t5;
+    	let p1;
+    	let t6_value = /*result*/ ctx[0].kural.tl + "";
+    	let t6;
+    	let each_value = /*result*/ ctx[0].kural.li.split('\n');
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			p0 = element("p");
+    			t0 = text("குறள் ");
+    			t1 = text(t1_value);
+    			t2 = text(" / Kural ");
+    			t3 = text(t3_value);
+    			t4 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t5 = space();
+    			p1 = element("p");
+    			t6 = text(t6_value);
+    			attr_dev(p0, "class", "tamil");
+    			add_location(p0, file$3, 4, 0, 47);
+    			attr_dev(p1, "class", "english");
+    			add_location(p1, file$3, 10, 0, 211);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			append_dev(p0, t0);
+    			append_dev(p0, t1);
+    			append_dev(p0, t2);
+    			append_dev(p0, t3);
+    			insert_dev(target, t4, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, p1, anchor);
+    			append_dev(p1, t6);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*result*/ 1 && t1_value !== (t1_value = /*result*/ ctx[0].i + 1 + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*result*/ 1 && t3_value !== (t3_value = /*result*/ ctx[0].i + 1 + "")) set_data_dev(t3, t3_value);
+
+    			if (dirty & /*result*/ 1) {
+    				each_value = /*result*/ ctx[0].kural.li.split('\n');
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(t5.parentNode, t5);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if (dirty & /*result*/ 1 && t6_value !== (t6_value = /*result*/ ctx[0].kural.tl + "")) set_data_dev(t6, t6_value);
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t4);
+    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(p1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$3.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('MiniKural', slots, []);
+    	let { result } = $$props;
+    	const writable_props = ['result'];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<MiniKural> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$$set = $$props => {
+    		if ('result' in $$props) $$invalidate(0, result = $$props.result);
+    	};
+
+    	$$self.$capture_state = () => ({ result });
+
+    	$$self.$inject_state = $$props => {
+    		if ('result' in $$props) $$invalidate(0, result = $$props.result);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [result];
+    }
+
+    class MiniKural extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { result: 0 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "MiniKural",
+    			options,
+    			id: create_fragment$3.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*result*/ ctx[0] === undefined && !('result' in props)) {
+    			console.warn("<MiniKural> was created without expected prop 'result'");
+    		}
+    	}
+
+    	get result() {
+    		throw new Error("<MiniKural>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set result(value) {
+    		throw new Error("<MiniKural>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\Index.svelte generated by Svelte v3.44.3 */
+    const file$2 = "src\\Index.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[5] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[8] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[11] = list[i];
+    	return child_ctx;
+    }
+
+    // (29:16) {#each chapter.chapters as childChapter}
+    function create_each_block_2(ctx) {
+    	let h5;
+    	let t0_value = /*childChapter*/ ctx[11].name + "";
+    	let t0;
+    	let t1;
+    	let t2_value = /*childChapter*/ ctx[11].translation + "";
+    	let t2;
+    	let br;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler_3() {
+    		return /*click_handler_3*/ ctx[4](/*childChapter*/ ctx[11]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h5 = element("h5");
+    			t0 = text(t0_value);
+    			t1 = text(" / ");
+    			t2 = text(t2_value);
+    			br = element("br");
+    			attr_dev(h5, "class", "tamil translated bold clickable");
+    			add_location(h5, file$2, 29, 20, 1177);
+    			add_location(br, file$2, 32, 74, 1415);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h5, anchor);
+    			append_dev(h5, t0);
+    			append_dev(h5, t1);
+    			append_dev(h5, t2);
+    			insert_dev(target, br, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(h5, "click", click_handler_3, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h5);
+    			if (detaching) detach_dev(br);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2.name,
+    		type: "each",
+    		source: "(29:16) {#each chapter.chapters as childChapter}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (16:8) {#each section.chapters as chapter}
+    function create_each_block_1(ctx) {
+    	let h4;
+    	let a;
+    	let i;
+    	let t0;
+    	let p;
+    	let t1_value = /*chapter*/ ctx[8].name + "";
+    	let t1;
+    	let t2;
+    	let t3_value = /*chapter*/ ctx[8].translation + "";
+    	let t3;
+    	let t4;
+    	let div;
+    	let t5;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[2](/*chapter*/ ctx[8]);
+    	}
+
+    	function click_handler_2() {
+    		return /*click_handler_2*/ ctx[3](/*chapter*/ ctx[8]);
+    	}
+
+    	let each_value_2 = /*chapter*/ ctx[8].chapters;
+    	validate_each_argument(each_value_2);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h4 = element("h4");
+    			a = element("a");
+    			i = element("i");
+    			t0 = space();
+    			p = element("p");
+    			t1 = text(t1_value);
+    			t2 = text(" / ");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			div = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t5 = space();
+    			attr_dev(i, "class", "fas fa-chevron-right");
+    			add_location(i, file$2, 20, 19, 789);
+    			add_location(a, file$2, 18, 16, 648);
+    			add_location(p, file$2, 22, 16, 849);
+    			attr_dev(h4, "class", "tamil translated bold");
+    			add_location(h4, file$2, 16, 12, 533);
+    			attr_dev(div, "id", "cha-" + /*chapter*/ ctx[8].kurals[0]);
+    			attr_dev(div, "class", "hidden subcontents");
+    			add_location(div, file$2, 27, 12, 1036);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h4, anchor);
+    			append_dev(h4, a);
+    			append_dev(a, i);
+    			append_dev(h4, t0);
+    			append_dev(h4, p);
+    			append_dev(p, t1);
+    			append_dev(p, t2);
+    			append_dev(p, t3);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+
+    			append_dev(div, t5);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a, "click", click_handler_1, false, false, false),
+    					listen_dev(p, "click", click_handler_2, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*dispatch, window*/ 1) {
+    				each_value_2 = /*chapter*/ ctx[8].chapters;
+    				validate_each_argument(each_value_2);
+    				let i;
+
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div, t5);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_2.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h4);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(div);
+    			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(16:8) {#each section.chapters as chapter}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (10:4) {#each window.kuralIndices as section}
+    function create_each_block$1(ctx) {
+    	let h3;
+    	let t0_value = /*section*/ ctx[5].name + "";
+    	let t0;
+    	let t1;
+    	let t2_value = /*section*/ ctx[5].translation + "";
+    	let t2;
+    	let br;
+    	let t3;
+    	let each_1_anchor;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler() {
+    		return /*click_handler*/ ctx[1](/*section*/ ctx[5]);
+    	}
+
+    	let each_value_1 = /*section*/ ctx[5].chapters;
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h3 = element("h3");
+    			t0 = text(t0_value);
+    			t1 = text(" / ");
+    			t2 = text(t2_value);
+    			br = element("br");
+    			t3 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			each_1_anchor = empty();
+    			attr_dev(h3, "class", "tamil translated bold clickable");
+    			add_location(h3, file$2, 10, 8, 275);
+    			add_location(br, file$2, 13, 52, 467);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h3, anchor);
+    			append_dev(h3, t0);
+    			append_dev(h3, t1);
+    			append_dev(h3, t2);
+    			insert_dev(target, br, anchor);
+    			insert_dev(target, t3, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, each_1_anchor, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(h3, "click", click_handler, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*window, dispatch, document*/ 1) {
+    				each_value_1 = /*section*/ ctx[5].chapters;
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(br);
+    			if (detaching) detach_dev(t3);
+    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(each_1_anchor);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(10:4) {#each window.kuralIndices as section}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$2(ctx) {
+    	let div;
+    	let h1;
+    	let br;
+    	let t1;
+    	let each_value = window.kuralIndices;
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "பொருளடக்கம் / Index";
+    			br = element("br");
+    			t1 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(h1, "class", "tamil translated bold");
+    			add_location(h1, file$2, 7, 4, 156);
+    			add_location(br, file$2, 7, 62, 214);
+    			attr_dev(div, "class", "indices");
+    			add_location(div, file$2, 6, 0, 129);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h1);
+    			append_dev(div, br);
+    			append_dev(div, t1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*window, dispatch, document*/ 1) {
+    				each_value = window.kuralIndices;
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$2.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$2($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Index', slots, []);
+    	const dispatch = createEventDispatcher();
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Index> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = section => dispatch('request', { start: section.kurals[0] });
+
+    	const click_handler_1 = chapter => {
+    		document.getElementById(`cha-${chapter.kurals[0]}`).classList.toggle('hidden');
+    	};
+
+    	const click_handler_2 = chapter => dispatch('request', { start: chapter.kurals[0] });
+    	const click_handler_3 = childChapter => dispatch('request', { start: childChapter.se[0] });
+    	$$self.$capture_state = () => ({ createEventDispatcher, dispatch });
+    	return [dispatch, click_handler, click_handler_1, click_handler_2, click_handler_3];
+    }
+
+    class Index extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Index",
+    			options,
+    			id: create_fragment$2.name
+    		});
+    	}
+    }
+
+    /* src\Footer.svelte generated by Svelte v3.44.3 */
+
+    const file$1 = "src\\Footer.svelte";
+
+    function create_fragment$1(ctx) {
+    	let div;
+    	let h1;
+    	let t1;
+    	let p0;
+    	let t2;
+    	let a0;
+    	let t4;
+    	let t5;
+    	let p1;
+    	let t6;
+    	let a1;
+    	let t8;
+    	let br0;
+    	let t9;
+    	let p2;
+    	let t12;
+    	let p3;
+    	let br1;
+    	let t15;
+    	let a2;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "திருக்குறள்";
+    			t1 = space();
+    			p0 = element("p");
+    			t2 = text("இங்கு பயன்படுத்தப்படும் திருக்குறளின் விவரங்கள் இந்த ");
+    			a0 = element("a");
+    			a0.textContent = "Repo";
+    			t4 = text("-வில் இருந்து பெறப்பட்டது...");
+    			t5 = space();
+    			p1 = element("p");
+    			t6 = text("The data used here is borrowed from this ");
+    			a1 = element("a");
+    			a1.textContent = "Repo";
+    			t8 = text("...");
+    			br0 = element("br");
+    			t9 = space();
+    			p2 = element("p");
+    			p2.textContent = `தமிழிலக்கியம் © ${new Date().getFullYear()}`;
+    			t12 = space();
+    			p3 = element("p");
+    			p3.textContent = `Tamizhilakkiyam © ${new Date().getFullYear()}`;
+    			br1 = element("br");
+    			t15 = space();
+    			a2 = element("a");
+    			a2.textContent = "Github";
+    			attr_dev(h1, "class", "tamil");
+    			add_location(h1, file$1, 1, 4, 26);
+    			attr_dev(a0, "href", "https://github.com/tk120404/thirukkural");
+    			add_location(a0, file$1, 3, 74, 138);
+    			attr_dev(p0, "class", "tamil");
+    			add_location(p0, file$1, 3, 4, 68);
+    			attr_dev(a1, "href", "https://github.com/tk120404/thirukkural");
+    			add_location(a1, file$1, 4, 64, 294);
+    			attr_dev(p1, "class", "english");
+    			add_location(p1, file$1, 4, 4, 234);
+    			add_location(br0, file$1, 4, 129, 359);
+    			attr_dev(p2, "class", "tamil bold");
+    			add_location(p2, file$1, 6, 4, 372);
+    			attr_dev(p3, "class", "english bold");
+    			add_location(p3, file$1, 7, 4, 446);
+    			add_location(br1, file$1, 7, 76, 518);
+    			attr_dev(a2, "class", "english");
+    			attr_dev(a2, "href", "https://github.com/tamizhilakkiyam/tirukural");
+    			add_location(a2, file$1, 9, 4, 531);
+    			attr_dev(div, "class", "footer");
+    			add_location(div, file$1, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h1);
+    			append_dev(div, t1);
+    			append_dev(div, p0);
+    			append_dev(p0, t2);
+    			append_dev(p0, a0);
+    			append_dev(p0, t4);
+    			append_dev(div, t5);
+    			append_dev(div, p1);
+    			append_dev(p1, t6);
+    			append_dev(p1, a1);
+    			append_dev(p1, t8);
+    			append_dev(div, br0);
+    			append_dev(div, t9);
+    			append_dev(div, p2);
+    			append_dev(div, t12);
+    			append_dev(div, p3);
+    			append_dev(div, br1);
+    			append_dev(div, t15);
+    			append_dev(div, a2);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$1($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Footer', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Footer> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class Footer extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Footer",
+    			options,
+    			id: create_fragment$1.name
+    		});
+    	}
+    }
+
+    /* src\App.svelte generated by Svelte v3.44.3 */
+
+    const { console: console_1 } = globals;
+    const file = "src\\App.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[23] = list[i];
+    	return child_ctx;
+    }
+
+    // (174:8) {:else}
+    function create_else_block_1(ctx) {
+    	let div0;
+    	let kural;
+    	let t0;
+    	let a0;
+    	let t2;
+    	let a1;
+    	let t4;
+    	let div1;
+    	let index;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	kural = new Kural({
+    			props: {
+    				kural: /*loaded*/ ctx[0][/*mainKuralNumber*/ ctx[3]],
+    				kuralEnn: /*mainKuralNumber*/ ctx[3] + 1
+    			},
+    			$$inline: true
+    		});
+
+    	index = new Index({ $$inline: true });
+    	index.$on("request", /*request_handler*/ ctx[21]);
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			create_component(kural.$$.fragment);
+    			t0 = space();
+    			a0 = element("a");
+    			a0.textContent = "முந்தைய குறள் / Previous Kural";
+    			t2 = space();
+    			a1 = element("a");
+    			a1.textContent = "அடுத்த குறள் / Next Kural";
+    			t4 = space();
+    			div1 = element("div");
+    			create_component(index.$$.fragment);
+    			attr_dev(a0, "class", "kural-button");
+    			add_location(a0, file, 181, 16, 7311);
+    			attr_dev(a1, "class", "kural-button");
+    			add_location(a1, file, 183, 16, 7493);
+    			attr_dev(div0, "class", "kural-box");
+    			add_location(div0, file, 174, 12, 7054);
+    			attr_dev(div1, "class", "kural-box");
+    			add_location(div1, file, 186, 12, 7624);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			mount_component(kural, div0, null);
+    			append_dev(div0, t0);
+    			append_dev(div0, a0);
+    			append_dev(div0, t2);
+    			append_dev(div0, a1);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, div1, anchor);
+    			mount_component(index, div1, null);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a0, "click", /*click_handler_7*/ ctx[19], false, false, false),
+    					listen_dev(a1, "click", /*click_handler_8*/ ctx[20], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			const kural_changes = {};
+    			if (dirty & /*loaded, mainKuralNumber*/ 9) kural_changes.kural = /*loaded*/ ctx[0][/*mainKuralNumber*/ ctx[3]];
+    			if (dirty & /*mainKuralNumber*/ 8) kural_changes.kuralEnn = /*mainKuralNumber*/ ctx[3] + 1;
+    			kural.$set(kural_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(kural.$$.fragment, local);
+    			transition_in(index.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(kural.$$.fragment, local);
+    			transition_out(index.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			destroy_component(kural);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(div1);
+    			destroy_component(index);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block_1.name,
+    		type: "else",
+    		source: "(174:8) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (144:32) 
+    function create_if_block_3(ctx) {
+    	let t0;
+    	let t1;
+    	let div;
+    	let a;
+    	let p;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	let each_value = /*searchResults*/ ctx[1].slice((/*searchPageIndex*/ ctx[2] - 1) * 6, /*searchPageIndex*/ ctx[2] * 6);
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	function select_block_type_1(ctx, dirty) {
+    		if (/*searchResults*/ ctx[1].length == 0) return create_if_block_4;
+    		return create_else_block;
+    	}
+
+    	let current_block_type = select_block_type_1(ctx);
+    	let if_block = current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t0 = space();
+    			if_block.c();
+    			t1 = space();
+    			div = element("div");
+    			a = element("a");
+    			p = element("p");
+    			p.textContent = "முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா? Back to Homepage?";
+    			attr_dev(p, "class", "tamil");
+    			add_location(p, file, 170, 20, 6902);
+    			attr_dev(a, "class", "bth-link");
+    			add_location(a, file, 169, 16, 6829);
+    			attr_dev(div, "class", "kural-box");
+    			add_location(div, file, 167, 12, 6725);
+    		},
+    		m: function mount(target, anchor) {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, t0, anchor);
+    			if_block.m(target, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, a);
+    			append_dev(a, p);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(a, "click", /*click_handler_6*/ ctx[18], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resetConfig, searchResults, searchPageIndex*/ 518) {
+    				each_value = /*searchResults*/ ctx[1].slice((/*searchPageIndex*/ ctx[2] - 1) * 6, /*searchPageIndex*/ ctx[2] * 6);
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(t0.parentNode, t0);
+    					}
+    				}
+
+    				group_outros();
+
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
+    				check_outros();
+    			}
+
+    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(t1.parentNode, t1);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t0);
+    			if_block.d(detaching);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3.name,
+    		type: "if",
+    		source: "(144:32) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (133:33) 
+    function create_if_block_2(ctx) {
+    	let div2;
+    	let div0;
+    	let t0;
+    	let t1;
+    	let t2;
+    	let t3;
+    	let div1;
+    	let t4;
+    	let t5;
+    	let t6;
+    	let t7;
+    	let a;
+    	let p0;
+    	let t9;
+    	let p1;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div0 = element("div");
+    			t0 = text("குறள் எண் ");
+    			t1 = text(/*requestedKural*/ ctx[5]);
+    			t2 = text(" திருக்குறளில் இல்லை");
+    			t3 = space();
+    			div1 = element("div");
+    			t4 = text("Kural number ");
+    			t5 = text(/*requestedKural*/ ctx[5]);
+    			t6 = text(" does not exists in Tirukkural.");
+    			t7 = space();
+    			a = element("a");
+    			p0 = element("p");
+    			p0.textContent = "முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா?";
+    			t9 = space();
+    			p1 = element("p");
+    			p1.textContent = "Back to Homepage?";
+    			attr_dev(div0, "class", "tamil");
+    			add_location(div0, file, 134, 16, 4911);
+    			attr_dev(div1, "class", "english");
+    			add_location(div1, file, 135, 16, 5000);
+    			attr_dev(p0, "class", "tamil");
+    			add_location(p0, file, 139, 20, 5243);
+    			attr_dev(p1, "class", "english");
+    			add_location(p1, file, 140, 20, 5326);
+    			attr_dev(a, "class", "bth-link");
+    			add_location(a, file, 138, 16, 5170);
+    			attr_dev(div2, "class", "kural-box");
+    			add_location(div2, file, 133, 12, 4870);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div0, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, t2);
+    			append_dev(div2, t3);
+    			append_dev(div2, div1);
+    			append_dev(div1, t4);
+    			append_dev(div1, t5);
+    			append_dev(div1, t6);
+    			append_dev(div2, t7);
+    			append_dev(div2, a);
+    			append_dev(a, p0);
+    			append_dev(a, t9);
+    			append_dev(a, p1);
+
+    			if (!mounted) {
+    				dispose = listen_dev(a, "click", /*click_handler_2*/ ctx[14], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*requestedKural*/ 32) set_data_dev(t1, /*requestedKural*/ ctx[5]);
+    			if (dirty & /*requestedKural*/ 32) set_data_dev(t5, /*requestedKural*/ ctx[5]);
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(133:33) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (109:8) {#if withinKuralRange(requestedKural)}
+    function create_if_block_1(ctx) {
+    	let div0;
+    	let kural;
+    	let t0;
+    	let a0;
+    	let t2;
+    	let div1;
+    	let a1;
+    	let p;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	kural = new Kural({
+    			props: {
+    				kural: /*loaded*/ ctx[0][/*requestedKural*/ ctx[5] - 1],
+    				kuralEnn: /*requestedKural*/ ctx[5]
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			create_component(kural.$$.fragment);
+    			t0 = space();
+    			a0 = element("a");
+    			a0.textContent = "இக்குறளை முகப்புப்பக்கத்தில் அமைக்க / Set this kural at homepage";
+    			t2 = space();
+    			div1 = element("div");
+    			a1 = element("a");
+    			p = element("p");
+    			p.textContent = "முகப்புப் பக்கத்திற்குச் செல்ல வேண்டுமா? Back to Homepage?";
+    			attr_dev(a0, "class", "kural-button");
+    			set_style(a0, "min-width", "calc(100% - 20px)");
+    			add_location(a0, file, 116, 16, 4119);
+    			attr_dev(div0, "class", "kural-box");
+    			add_location(div0, file, 109, 12, 3864);
+    			attr_dev(p, "class", "tamil");
+    			add_location(p, file, 129, 20, 4700);
+    			attr_dev(a1, "class", "bth-link");
+    			add_location(a1, file, 128, 16, 4627);
+    			attr_dev(div1, "class", "kural-box");
+    			add_location(div1, file, 126, 12, 4523);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			mount_component(kural, div0, null);
+    			append_dev(div0, t0);
+    			append_dev(div0, a0);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, a1);
+    			append_dev(a1, p);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a0, "click", /*click_handler*/ ctx[12], false, false, false),
+    					listen_dev(a1, "click", /*click_handler_1*/ ctx[13], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			const kural_changes = {};
+    			if (dirty & /*loaded, requestedKural*/ 33) kural_changes.kural = /*loaded*/ ctx[0][/*requestedKural*/ ctx[5] - 1];
+    			if (dirty & /*requestedKural*/ 32) kural_changes.kuralEnn = /*requestedKural*/ ctx[5];
+    			kural.$set(kural_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(kural.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(kural.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			destroy_component(kural);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(div1);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(109:8) {#if withinKuralRange(requestedKural)}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (105:4) {#if loaded.length == 0}
+    function create_if_block(ctx) {
+    	let p0;
+    	let t1;
+    	let p1;
+
+    	const block = {
+    		c: function create() {
+    			p0 = element("p");
+    			p0.textContent = "சிறிது நேரம் காத்திருக்கவும்...";
+    			t1 = space();
+    			p1 = element("p");
+    			p1.textContent = "Please wait for some time...";
+    			attr_dev(p0, "class", "tamil");
+    			add_location(p0, file, 105, 8, 3676);
+    			attr_dev(p1, "class", "english");
+    			add_location(p1, file, 106, 8, 3738);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p1, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(105:4) {#if loaded.length == 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (145:12) {#each searchResults.slice((searchPageIndex - 1) * 6, searchPageIndex * 6) as result}
+    function create_each_block(ctx) {
+    	let div;
+    	let minikural;
+    	let t0;
+    	let a;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	minikural = new MiniKural({
+    			props: { result: /*result*/ ctx[23] },
+    			$$inline: true
+    		});
+
+    	function click_handler_3() {
+    		return /*click_handler_3*/ ctx[15](/*result*/ ctx[23]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			create_component(minikural.$$.fragment);
+    			t0 = space();
+    			a = element("a");
+    			a.textContent = "மேலும் படிக்க / Read More";
+    			attr_dev(a, "class", "kural-button");
+    			add_location(a, file, 148, 20, 5722);
+    			attr_dev(div, "class", "kural-box");
+    			add_location(div, file, 145, 16, 5560);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			mount_component(minikural, div, null);
+    			append_dev(div, t0);
+    			append_dev(div, a);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(a, "click", click_handler_3, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			const minikural_changes = {};
+    			if (dirty & /*searchResults, searchPageIndex*/ 6) minikural_changes.result = /*result*/ ctx[23];
+    			minikural.$set(minikural_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(minikural.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(minikural.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			destroy_component(minikural);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(145:12) {#each searchResults.slice((searchPageIndex - 1) * 6, searchPageIndex * 6) as result}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (158:12) {:else}
+    function create_else_block(ctx) {
+    	let br;
+    	let t0;
+    	let a0;
+    	let t2;
+    	let a1;
+    	let t4;
+    	let h3;
+    	let t5;
+    	let t6;
+    	let t7;
+    	let t8_value = Math.ceil(/*searchResults*/ ctx[1].length / 10) + "";
+    	let t8;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			br = element("br");
+    			t0 = space();
+    			a0 = element("a");
+    			a0.textContent = "முந்தைய பக்கம் / Previous Page";
+    			t2 = space();
+    			a1 = element("a");
+    			a1.textContent = "அடுத்த பக்கம் / Next Page";
+    			t4 = space();
+    			h3 = element("h3");
+    			t5 = text("Page / பக்கம் ");
+    			t6 = text(/*searchPageIndex*/ ctx[2]);
+    			t7 = text("/");
+    			t8 = text(t8_value);
+    			add_location(br, file, 158, 16, 6209);
+    			attr_dev(a0, "class", "kural-button");
+    			add_location(a0, file, 160, 16, 6295);
+    			attr_dev(a1, "class", "kural-button");
+    			add_location(a1, file, 162, 16, 6477);
+    			attr_dev(h3, "class", "tamil bold");
+    			add_location(h3, file, 164, 16, 6592);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, br, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, a0, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, a1, anchor);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, h3, anchor);
+    			append_dev(h3, t5);
+    			append_dev(h3, t6);
+    			append_dev(h3, t7);
+    			append_dev(h3, t8);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a0, "click", /*click_handler_4*/ ctx[16], false, false, false),
+    					listen_dev(a1, "click", /*click_handler_5*/ ctx[17], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*searchPageIndex*/ 4) set_data_dev(t6, /*searchPageIndex*/ ctx[2]);
+    			if (dirty & /*searchResults*/ 2 && t8_value !== (t8_value = Math.ceil(/*searchResults*/ ctx[1].length / 10) + "")) set_data_dev(t8, t8_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(br);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(a0);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(a1);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(h3);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(158:12) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (153:12) {#if searchResults.length == 0}
+    function create_if_block_4(ctx) {
+    	let div2;
+    	let div0;
+    	let t0;
+    	let t1;
+    	let t2;
+    	let t3;
+    	let div1;
+    	let t4;
+    	let t5;
+    	let t6;
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div0 = element("div");
+    			t0 = text("\"");
+    			t1 = text(/*searchQuery*/ ctx[4]);
+    			t2 = text("\" என்னும் குறளை கண்டுபிடிக்க முடியவில்லை...");
+    			t3 = space();
+    			div1 = element("div");
+    			t4 = text("Cannot find results for \"");
+    			t5 = text(/*searchQuery*/ ctx[4]);
+    			t6 = text("\"...");
+    			attr_dev(div0, "class", "tamil");
+    			add_location(div0, file, 154, 20, 5973);
+    			attr_dev(div1, "class", "english");
+    			add_location(div1, file, 155, 20, 6077);
+    			attr_dev(div2, "class", "kural-box");
+    			add_location(div2, file, 153, 16, 5928);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div0, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, t2);
+    			append_dev(div2, t3);
+    			append_dev(div2, div1);
+    			append_dev(div1, t4);
+    			append_dev(div1, t5);
+    			append_dev(div1, t6);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*searchQuery*/ 16) set_data_dev(t1, /*searchQuery*/ ctx[4]);
+    			if (dirty & /*searchQuery*/ 16) set_data_dev(t5, /*searchQuery*/ ctx[4]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_4.name,
+    		type: "if",
+    		source: "(153:12) {#if searchResults.length == 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let div0;
+    	let h1;
+    	let t1;
+    	let p0;
+    	let t3;
+    	let input;
+    	let t4;
+    	let p1;
+    	let t6;
+    	let div1;
+    	let show_if;
+    	let current_block_type_index;
+    	let if_block;
+    	let t7;
+    	let footer;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	const if_block_creators = [
+    		create_if_block,
+    		create_if_block_1,
+    		create_if_block_2,
+    		create_if_block_3,
+    		create_else_block_1
+    	];
+
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*loaded*/ ctx[0].length == 0) return 0;
+    		if (show_if == null || dirty & /*requestedKural*/ 32) show_if = !!/*withinKuralRange*/ ctx[6](/*requestedKural*/ ctx[5]);
+    		if (show_if) return 1;
+    		if (/*requestedKural*/ ctx[5]) return 2;
+    		if (/*searchResults*/ ctx[1]) return 3;
+    		return 4;
+    	}
+
+    	current_block_type_index = select_block_type(ctx, -1);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	footer = new Footer({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "திருக்குறள்";
+    			t1 = space();
+    			p0 = element("p");
+    			p0.textContent = "திருவள்ளுவரின் திருக்குறள் / Tiruvalluvar's Tirukkural";
+    			t3 = space();
+    			input = element("input");
+    			t4 = space();
+    			p1 = element("p");
+    			p1.textContent = "தேட enter-ஐ அழுத்தவும் / Press enter to search.";
+    			t6 = space();
+    			div1 = element("div");
+    			if_block.c();
+    			t7 = space();
+    			create_component(footer.$$.fragment);
+    			add_location(h1, file, 92, 4, 3202);
+    			add_location(p0, file, 93, 4, 3228);
+    			attr_dev(input, "placeholder", "திருக்குறளைத் தேடுங்கள் / Search Tirukkural");
+    			attr_dev(input, "id", "search");
+    			add_location(input, file, 95, 4, 3297);
+    			set_style(p1, "margin-top", "5px");
+    			add_location(p1, file, 100, 4, 3511);
+    			attr_dev(div0, "class", "cover");
+    			attr_dev(div0, "id", "cover");
+    			add_location(div0, file, 91, 0, 3166);
+    			attr_dev(div1, "class", "content");
+    			attr_dev(div1, "id", "content");
+    			add_location(div1, file, 103, 0, 3602);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, h1);
+    			append_dev(div0, t1);
+    			append_dev(div0, p0);
+    			append_dev(div0, t3);
+    			append_dev(div0, input);
+    			append_dev(div0, t4);
+    			append_dev(div0, p1);
+    			insert_dev(target, t6, anchor);
+    			insert_dev(target, div1, anchor);
+    			if_blocks[current_block_type_index].m(div1, null);
+    			insert_dev(target, t7, anchor);
+    			mount_component(footer, target, anchor);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(input, "keydown", /*keydown_handler*/ ctx[11], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx, dirty);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(div1, null);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			transition_in(footer.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			transition_out(footer.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(div1);
+    			if_blocks[current_block_type_index].d();
+    			if (detaching) detach_dev(t7);
+    			destroy_component(footer, detaching);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const englishLetterRegex = /^[A-Za-z]+$/;
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('App', slots, []);
+    	const queries = new URLSearchParams(window.location.search);
+    	const withinKuralRange = x => x > 0 && x <= 1330;
+    	let loaded = [];
+    	let searchResults = null;
+    	let searchPageIndex = 1;
+    	let mainKuralNumber = parseInt(localStorage.getItem('kural_no') || '0');
+    	let searchQuery = queries.get('search');
+    	let requestedKural = parseInt(queries.get('kural'));
+    	requestedKural = isNaN(requestedKural) ? null : requestedKural;
+
+    	String.prototype.toProperCase = function () {
+    		return this.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+    	};
+
+    	function parseSearchQuery(query) {
+    		if (!query?.length) return;
+    		let intParsed = parseInt(query);
+    		if (!isNaN(intParsed)) return $$invalidate(5, requestedKural = intParsed);
+    		$$invalidate(5, requestedKural = null);
+    		let results = [];
+    		$$invalidate(4, searchQuery = query);
+
+    		if (query.replace(' ', '').match(englishLetterRegex)) {
+    			if (query.length < 5) return alert("Query must be atleast 5 characters long for search in english to prevent website crash.");
+    			query = query.toProperCase();
+
+    			for (let i = 0; i < loaded.length; i++) {
+    				let kural = loaded[i];
+    				if (kural.tlr.includes(query)) results.push({ kural, i });
+    			}
+    		} else if (query.length < 3) alert("இணையதள செயலிழப்பை தடுக்க வினவல் குறைந்தது 5 எழுத்துகள் நீளமாக இருக்க வேண்டும்.");
+
+    		for (let i = 0; i < loaded.length; i++) {
+    			let kural = loaded[i];
+    			if (kural.li.includes(query)) results.push({ kural, i });
+    		}
+
+    		return $$invalidate(1, searchResults = results);
+    	}
+
+    	function updateMainKuralNumber(x, isIndex) {
+    		console.log(mainKuralNumber);
+
+    		if (isIndex) {
+    			if (!withinKuralRange(x + 1)) return;
+    			$$invalidate(3, mainKuralNumber = x);
+    		} else {
+    			if (!withinKuralRange(mainKuralNumber + 1)) return;
+    			$$invalidate(3, mainKuralNumber = mainKuralNumber + x);
+    		}
+
+    		localStorage.setItem('kural_no', mainKuralNumber);
+    	}
+
+    	function resetConfig(n = null) {
+    		$$invalidate(5, requestedKural = n);
+    		$$invalidate(1, searchResults = null);
+    		$$invalidate(2, searchPageIndex = 1);
+    		$$invalidate(4, searchQuery = null);
+    	}
+
+    	function updateSearchPageIndex(x) {
+    		if (searchResults?.length) {
+    			let newIndex = searchPageIndex + x;
+    			if (Math.ceil(searchResults.length / 10) < newIndex) $$invalidate(2, searchPageIndex = 1); else if (newIndex <= 0) $$invalidate(2, searchPageIndex = Math.ceil(searchResults.length / 10)); else $$invalidate(2, searchPageIndex = newIndex);
+    		}
+    	}
+
+    	fetch(`${window.location.href}/tirukkural.json`).then(res => res.json()).then(body => {
+    		$$invalidate(0, loaded = body);
+    		parseSearchQuery(searchQuery);
+    	});
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	const keydown_handler = e => {
+    		if (e.key == "Enter") parseSearchQuery(document.getElementById('search').value);
+    	};
+
+    	const click_handler = () => {
+    		updateMainKuralNumber(requestedKural - 1, true);
+    		resetConfig();
+    	};
+
+    	const click_handler_1 = () => resetConfig();
+    	const click_handler_2 = () => resetConfig();
+    	const click_handler_3 = result => resetConfig(result.i + 1);
+    	const click_handler_4 = () => updateSearchPageIndex(-1);
+    	const click_handler_5 = () => updateSearchPageIndex(1);
+    	const click_handler_6 = () => resetConfig();
+    	const click_handler_7 = () => updateMainKuralNumber(-1);
+    	const click_handler_8 = () => updateMainKuralNumber(1);
+
+    	const request_handler = ({ detail }) => {
+    		updateMainKuralNumber(detail.start - 1, true);
+    		document.getElementById('content').scrollIntoView();
+    	};
+
+    	$$self.$capture_state = () => ({
+    		Kural,
+    		MiniKural,
+    		Index,
+    		Footer,
+    		queries,
+    		withinKuralRange,
+    		englishLetterRegex,
+    		loaded,
+    		searchResults,
+    		searchPageIndex,
+    		mainKuralNumber,
+    		searchQuery,
+    		requestedKural,
+    		parseSearchQuery,
+    		updateMainKuralNumber,
+    		resetConfig,
+    		updateSearchPageIndex
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('loaded' in $$props) $$invalidate(0, loaded = $$props.loaded);
+    		if ('searchResults' in $$props) $$invalidate(1, searchResults = $$props.searchResults);
+    		if ('searchPageIndex' in $$props) $$invalidate(2, searchPageIndex = $$props.searchPageIndex);
+    		if ('mainKuralNumber' in $$props) $$invalidate(3, mainKuralNumber = $$props.mainKuralNumber);
+    		if ('searchQuery' in $$props) $$invalidate(4, searchQuery = $$props.searchQuery);
+    		if ('requestedKural' in $$props) $$invalidate(5, requestedKural = $$props.requestedKural);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		loaded,
+    		searchResults,
+    		searchPageIndex,
+    		mainKuralNumber,
+    		searchQuery,
+    		requestedKural,
+    		withinKuralRange,
+    		parseSearchQuery,
+    		updateMainKuralNumber,
+    		resetConfig,
+    		updateSearchPageIndex,
+    		keydown_handler,
+    		click_handler,
+    		click_handler_1,
+    		click_handler_2,
+    		click_handler_3,
+    		click_handler_4,
+    		click_handler_5,
+    		click_handler_6,
+    		click_handler_7,
+    		click_handler_8,
+    		request_handler
+    	];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+    }
+
+    var main = new App({ target: document.body });
+
+    return main;
+
+})();
