@@ -89,7 +89,7 @@
         });
 </script>
 
-<div class="cover">
+<div class="cover" id="cover">
     <h1>திருக்குறள்</h1>
     <p>திருவள்ளுவரின் திருக்குறள் / Tiruvalluvar's Tirukkural</p>
 
